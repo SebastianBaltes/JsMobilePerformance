@@ -23,7 +23,7 @@ function sendMail() {
 	text+="\n";
 	text+=allLogs;
 	
-	var email = "mailto:baltes@objectcode.de";
+	var email = "baltes@objectcode.de";
 	
 	window.plugins.emailComposer.showEmailComposerWithCallback(null,subject,text,[email],[],[],false,[]);
 }
@@ -47,7 +47,9 @@ $(function(){
 		var newModule = getModule($(this));
 		console.log("page transition "+prevModule.name+" -> "+newModule.name);
 		prevModule.stop();
-		$.mobile.showPageLoadingMsg("a", newModule.name);
+		if (newModule!==nullModule) {
+			$.mobile.showPageLoadingMsg("a", newModule.name);
+		}
 		
 		if (newModule!==nullModule) {
 			permLog("----------------------");
@@ -59,7 +61,9 @@ $(function(){
 		logElement.empty();
 		setTimeout(function(){
 			newModule.start();
-			$.mobile.hidePageLoadingMsg();
+			if (newModule!==nullModule) {
+				$.mobile.hidePageLoadingMsg();
+			}
 		},1);
 	});
 	$('#SendMail').click(function() {
