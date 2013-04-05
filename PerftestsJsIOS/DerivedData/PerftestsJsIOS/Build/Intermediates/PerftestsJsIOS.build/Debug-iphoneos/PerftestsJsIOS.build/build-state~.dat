@@ -1,0 +1,794 @@
+TPerftestsJsIOS
+v5
+r1
+cCheck dependencies
+cCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/ResourceRules.plist
+cProcessInfoPlistFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Info.plist PerftestsJsIOS/PerftestsJsIOS-Info.plist
+cPhaseScriptExecution "Copy www directory" /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Script-304B58A110DAC018002A0835.sh
+cCpResource PerftestsJsIOS/config.xml DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/config.xml
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon-72.png PerftestsJsIOS/Resources/icons/icon-72.png
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon.png PerftestsJsIOS/Resources/icons/icon.png
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon@2x.png PerftestsJsIOS/Resources/icons/icon@2x.png
+cCpResource PerftestsJsIOS/Resources/Capture.bundle DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Capture.bundle
+cCopyStringsFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/en.lproj/Localizable.strings PerftestsJsIOS/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/es.lproj/Localizable.strings PerftestsJsIOS/Resources/es.lproj/Localizable.strings
+cCompileXIB /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.xib
+cCopyStringsFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/de.lproj/Localizable.strings PerftestsJsIOS/Resources/de.lproj/Localizable.strings
+cCopyStringsFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/se.lproj/Localizable.strings PerftestsJsIOS/Resources/se.lproj/Localizable.strings
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape@2x~ipad.png PerftestsJsIOS/Resources/splash/Default-Landscape@2x~ipad.png
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape~ipad.png PerftestsJsIOS/Resources/splash/Default-Landscape~ipad.png
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait@2x~ipad.png PerftestsJsIOS/Resources/splash/Default-Portrait@2x~ipad.png
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait~ipad.png PerftestsJsIOS/Resources/splash/Default-Portrait~ipad.png
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default@2x~iphone.png PerftestsJsIOS/Resources/splash/Default@2x~iphone.png
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default~iphone.png PerftestsJsIOS/Resources/splash/Default~iphone.png
+cCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-568h@2x~iphone.png PerftestsJsIOS/Resources/splash/Default-568h@2x~iphone.png
+cProcessPCH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch.pth PerftestsJsIOS/PerftestsJsIOS-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch.pth PerftestsJsIOS/PerftestsJsIOS-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/main.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/AppDelegate.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/main.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/AppDelegate.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/MainViewController.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/MainViewController.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS normal armv7
+cLd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS normal armv7s
+cCreateUniversalBinary /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS normal "armv7 armv7s"
+cGenerateDSYMFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app.dSYM /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS
+cProcessProductPackaging "/Users/admin/Library/MobileDevice/Provisioning Profiles/9EAEF8FE-3130-4437-AD94-C72CB371B9BE.mobileprovision" /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision
+cProcessProductPackaging "/Users/admin/Library/MobileDevice/Provisioning Profiles/9EAEF8FE-3130-4437-AD94-C72CB371B9BE.mobileprovision" /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision
+cTouch /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app
+cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS.xcent
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk
+c000000005102E2A90000000000000110
+t1359143593
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist
+c000000005107C57900000000000001A7
+t1359463801
+s423
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist
+c000000005107C57900000000000001E5
+t1359463801
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000005107C57C000000000036CDF0
+t1359463804
+s3591664
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c000000005107C57B000000000014A320
+t1359463803
+s1352480
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c000000005107C57B00000000002AC100
+t1359463803
+s2801920
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+c000000005107C57B000000000003AE00
+t1359463803
+s241152
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000005107C57C00000000006B1F40
+t1359463804
+s7020352
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000005107C57C00000000002C8530
+t1359463804
+s2917680
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000005107C57C0000000000322700
+t1359463804
+s3286784
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000005107C57C0000000000114910
+t1359463804
+s1132816
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c000000005107C57C00000000001694D0
+t1359463804
+s1479888
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000005107C57E000000000062AD10
+t1359463806
+s6466832
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c000000005107C57E00000000005807F0
+t1359463806
+s5769200
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000005107C57E000000000012C360
+t1359463806
+s1229664
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000005107C58000000000003596B0
+t1359463808
+s3511984
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000005107C57F00000000000CAFB0
+t1359463807
+s831408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000005107C58100000000011BCDF0
+t1359463809
+s18599408
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/AppDelegate.o
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/MainViewController.o
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS.LinkFileList
+c00000000515ECD57000000000000024F
+t1365167447
+s591
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/main.o
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/AppDelegate.o
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/MainViewController.o
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS.LinkFileList
+c00000000515ECD570000000000000252
+t1365167447
+s594
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/main.o
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS.xcent
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Script-304B58A110DAC018002A0835.sh
+c00000000515ECD57000000000000042B
+t1365167447
+s1067
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch.pth
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch.pth
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app.dSYM
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Capture.bundle
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default~iphone.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Info.plist
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/MainViewController.nib
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PkgInfo
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/ResourceRules.plist
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/config.xml
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/es.lproj/Localizable.strings
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon-72.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon@2x.png
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/se.lproj/Localizable.strings
+t2
+s0
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/libCordova.a
+c00000000515ECD5700000000006D4140
+t1365167447
+s7160128
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m
+c00000000515EC8E30000000000001234
+t1365166307
+s4660
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m
+c00000000515EC8E3000000000000126F
+t1365166307
+s4719
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.xib
+c00000000515EC8E30000000000001759
+t1365166307
+s5977
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/PerftestsJsIOS-Prefix.pch
+c00000000515EC8E300000000000003CD
+t1365166307
+s973
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/Capture.bundle
+c00000000515EC8E3000000000000030E
+t1365166307
+s782
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/de.lproj/Localizable.strings
+c00000000515EC8E30000000000000485
+t1365166307
+s1157
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/en.lproj/Localizable.strings
+c00000000515EC8E30000000000000470
+t1365166307
+s1136
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/es.lproj/Localizable.strings
+c00000000515EC8E3000000000000047D
+t1365166307
+s1149
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon-72.png
+c00000000515EC8E30000000000001350
+t1365166307
+s4944
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon.png
+c00000000515EC8E30000000000000F3E
+t1365166307
+s3902
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon@2x.png
+c00000000515EC8E30000000000001EBD
+t1365166307
+s7869
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/se.lproj/Localizable.strings
+c00000000515EC8E30000000000000471
+t1365166307
+s1137
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-568h@2x~iphone.png
+c00000000515EC8E300000000000074F8
+t1365166307
+s29944
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Landscape@2x~ipad.png
+c00000000515EC8E30000000000012735
+t1365166307
+s75573
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Landscape~ipad.png
+c00000000515EC8E3000000000000817B
+t1365166307
+s33147
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Portrait@2x~ipad.png
+c00000000515EC8E30000000000012171
+t1365166307
+s74097
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Portrait~ipad.png
+c00000000515EC8E30000000000007F9A
+t1365166307
+s32666
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default@2x~iphone.png
+c00000000515EC8E30000000000007323
+t1365166307
+s29475
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default~iphone.png
+c00000000515EC8E3000000000000289A
+t1365166307
+s10394
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/config.xml
+c00000000515EC8E30000000000000B13
+t1365166307
+s2835
+
+N/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m
+c00000000515EC8E30000000000000460
+t1365166307
+s1120
+
+N/Users/admin/Library/MobileDevice/Provisioning Profiles/9EAEF8FE-3130-4437-AD94-C72CB371B9BE.mobileprovision
+c00000000511B8C6E0000000000002D60
+t1360759918
+s11616
+
+NPerftestsJsIOS/PerftestsJsIOS-Info.plist
+c00000000515EC8E300000000000009D3
+t1365166307
+s2515
+
+CBuild AST from /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m
+r0
+
+CBuild AST from /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m
+r0
+
+CBuild AST from /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies1630b9d7040fb741^8331ced7040fb741^---0#1#0#--18"Check dependencies36"443CE589-678A-454A-BFFF-B82121C73B2E-
+
+CCodeSign /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app
+r0
+
+CCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/AppDelegate.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s386860249.761812
+e386860249.863046
+r1
+xCompileC
+xDerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/AppDelegate.o
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m:68:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]
+o    self.viewController.useSplashScreen = YES;
+o                        ^
+o/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include/Cordova/CDVViewController.h:47:47: note: 'useSplashScreen' declared here
+o@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");
+o                                              ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m8d26c3d9040fb741^e205ddd9040fb741^-761"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m:68:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]    self.viewController.useSplashScreen = YES;                        ^/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include/Cordova/CDVViewController.h:47:47: note: 'useSplashScreen' declared here@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");                                              ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@128"'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property.-386860249#18446744073709551615#0#1(2@31"'useSplashScreen' declared here-386860249#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@112"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/CordovaLib/Classes/CDVViewController.h0000000000000000^46#46#46#46#1832#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@110"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m0000000000000000^67#24#67#24#2271#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@110"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m0000000000000000^4343"CompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/AppDelegate.o PerftestsJsIOS/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-generated-files.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-own-target-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-all-target-headers.hmap -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-project-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources/armv7 -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -include /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/AppDelegate.d --serialize-diagnostics /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/AppDelegate.dia -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/AppDelegate.o36"F77037C8-3CFD-48E5-8D90-A12BEB343796-
+
+CCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/MainViewController.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s386860249.802935
+e386860249.873167
+r1
+xCompileC
+xDerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/MainViewController.o
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.mfdbccdd9040fb741^4facdfd9040fb741^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m0000000000000000^4385"CompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/MainViewController.o PerftestsJsIOS/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-generated-files.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-own-target-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-all-target-headers.hmap -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-project-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources/armv7 -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -include /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/MainViewController.d --serialize-diagnostics /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/MainViewController.dia -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/MainViewController.o36"9B637AB6-6F6D-4663-8D11-AA4375884CF9-
+
+CCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/main.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s386860249.700195
+e386860249.760510
+r1
+xCompileC
+xDerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/main.o
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.mdbc2b7d9040fb741^75b0c2d9040fb741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m0000000000000000^4285"CompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/main.o PerftestsJsIOS/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-generated-files.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-own-target-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-all-target-headers.hmap -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-project-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources/armv7 -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -include /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/main.d --serialize-diagnostics /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/main.dia -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/main.o36"B99E84D0-0071-4310-88E8-3B43AAAF3848-
+
+CCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/AppDelegate.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s386860249.691459
+e386860249.799263
+r1
+xCompileC
+xDerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/AppDelegate.o
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m:68:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]
+o    self.viewController.useSplashScreen = YES;
+o                        ^
+o/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include/Cordova/CDVViewController.h:47:47: note: 'useSplashScreen' declared here
+o@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");
+o                                              ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m1824b1d9040fb741^1dafccd9040fb741^-761"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m:68:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]    self.viewController.useSplashScreen = YES;                        ^/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include/Cordova/CDVViewController.h:47:47: note: 'useSplashScreen' declared here@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");                                              ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@128"'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property.-386860249#18446744073709551615#0#1(2@31"'useSplashScreen' declared here-386860249#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@112"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/CordovaLib/Classes/CDVViewController.h0000000000000000^46#46#46#46#1832#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@110"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m0000000000000000^67#24#67#24#2271#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@110"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m0000000000000000^4350"CompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/AppDelegate.o PerftestsJsIOS/Classes/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-generated-files.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-own-target-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-all-target-headers.hmap -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-project-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources/armv7s -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -include /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/AppDelegate.d --serialize-diagnostics /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/AppDelegate.dia -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/AppDelegate.m -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/AppDelegate.o36"EC03D572-BEA2-4B10-A822-0FE85BA5649C-
+
+CCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/MainViewController.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s386860249.864529
+e386860249.980383
+r1
+xCompileC
+xDerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/MainViewController.o
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m9f71ddd9040fb741^61fafad9040fb741^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m0000000000000000^4392"CompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/MainViewController.o PerftestsJsIOS/Classes/MainViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-generated-files.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-own-target-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-all-target-headers.hmap -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-project-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources/armv7s -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -include /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/MainViewController.d --serialize-diagnostics /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/MainViewController.dia -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.m -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/MainViewController.o36"77067E36-CA52-4233-BBFB-8520ECA3520D-
+
+CCompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/main.o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s386860249.672160
+e386860249.698606
+r1
+xCompileC
+xDerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/main.o
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m5d34acd9040fb741^52d7b2d9040fb741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m0000000000000000^4292"CompileC DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/main.o PerftestsJsIOS/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-generated-files.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-own-target-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-all-target-headers.hmap -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-project-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources/armv7s -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -include /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/main.d --serialize-diagnostics /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/main.dia -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/main.m -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/main.o36"777B90BD-BA67-4AD6-8330-9E202A6A1CA9-
+
+CCompileXIB /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.xib
+s386860248.494183
+e386860248.541863
+r1
+xCompileXIB
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compiling /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.xibe49e7ed8040fb741^c6c08ad8040fb741^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.xib0000000000000000^956"CompileXIB PerftestsJsIOS/Classes/MainViewController.xib    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/MainViewController.nib /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk36"F3D2C0AF-1BC8-4E36-8BBF-FE1C718CE0D6-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-568h@2x~iphone.png PerftestsJsIOS/Resources/splash/Default-568h@2x~iphone.png
+s386860249.168630
+e386860249.285627
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-568h@2x~iphone.png
+xPerftestsJsIOS/Resources/splash/Default-568h@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection173"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-568h@2x~iphone.png PerftestsJsIOS/Resources/splash/Default-568h@2x~iphone.png46422bd9040fb741^f12c49d9040fb741^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-568h@2x~iphone.png0000000000000000^827"CopyPNGFile "DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-568h@2x~iphone.png" "PerftestsJsIOS/Resources/splash/Default-568h@2x~iphone.png"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-568h@2x~iphone.png" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-568h@2x~iphone.png"36"64B517F1-2FF1-4DDB-A089-ECFEC820885E-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape@2x~ipad.png PerftestsJsIOS/Resources/splash/Default-Landscape@2x~ipad.png
+s386860248.525320
+e386860248.987708
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape@2x~ipad.png
+xPerftestsJsIOS/Resources/splash/Default-Landscape@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection179"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape@2x~ipad.png PerftestsJsIOS/Resources/splash/Default-Landscape@2x~ipad.png9ab089d8040fb741^0adafcd8040fb741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Landscape@2x~ipad.png0000000000000000^839"CopyPNGFile "DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape@2x~ipad.png" "PerftestsJsIOS/Resources/splash/Default-Landscape@2x~ipad.png"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Landscape@2x~ipad.png" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape@2x~ipad.png"36"1C2390AA-7C80-4CBA-B5EF-91954DAC341A-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape~ipad.png PerftestsJsIOS/Resources/splash/Default-Landscape~ipad.png
+s386860248.552815
+e386860248.739638
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape~ipad.png
+xPerftestsJsIOS/Resources/splash/Default-Landscape~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection173"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape~ipad.png PerftestsJsIOS/Resources/splash/Default-Landscape~ipad.pngb29b8dd8040fb741^6f65bdd8040fb741^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Landscape~ipad.png0000000000000000^827"CopyPNGFile "DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape~ipad.png" "PerftestsJsIOS/Resources/splash/Default-Landscape~ipad.png"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Landscape~ipad.png" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Landscape~ipad.png"36"C56E6A3D-C8C6-46A3-8B30-263A327883C8-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait@2x~ipad.png PerftestsJsIOS/Resources/splash/Default-Portrait@2x~ipad.png
+s386860248.740905
+e386860249.099074
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait@2x~ipad.png
+xPerftestsJsIOS/Resources/splash/Default-Portrait@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection177"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait@2x~ipad.png PerftestsJsIOS/Resources/splash/Default-Portrait@2x~ipad.pngcfbfbdd8040fb741^cd5b19d9040fb741^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Portrait@2x~ipad.png0000000000000000^835"CopyPNGFile "DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait@2x~ipad.png" "PerftestsJsIOS/Resources/splash/Default-Portrait@2x~ipad.png"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Portrait@2x~ipad.png" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait@2x~ipad.png"36"B0954D7F-B5AD-4176-B687-361C39071647-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait~ipad.png PerftestsJsIOS/Resources/splash/Default-Portrait~ipad.png
+s386860248.989094
+e386860249.110485
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait~ipad.png
+xPerftestsJsIOS/Resources/splash/Default-Portrait~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection171"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait~ipad.png PerftestsJsIOS/Resources/splash/Default-Portrait~ipad.png0e49fdd8040fb741^e5471cd9040fb741^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Portrait~ipad.png0000000000000000^823"CopyPNGFile "DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait~ipad.png" "PerftestsJsIOS/Resources/splash/Default-Portrait~ipad.png"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default-Portrait~ipad.png" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default-Portrait~ipad.png"36"AE8E7941-27D0-414C-8539-100C1F6CD1CD-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default@2x~iphone.png PerftestsJsIOS/Resources/splash/Default@2x~iphone.png
+s386860249.100377
+e386860249.215314
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default@2x~iphone.png
+xPerftestsJsIOS/Resources/splash/Default@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection163"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default@2x~iphone.png PerftestsJsIOS/Resources/splash/Default@2x~iphone.pngf8c519d9040fb741^d02a37d9040fb741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default@2x~iphone.png0000000000000000^807"CopyPNGFile "DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default@2x~iphone.png" "PerftestsJsIOS/Resources/splash/Default@2x~iphone.png"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default@2x~iphone.png" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default@2x~iphone.png"36"DDEB5D95-46C9-48CA-94A3-413D7F4169F7-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default~iphone.png PerftestsJsIOS/Resources/splash/Default~iphone.png
+s386860249.111790
+e386860249.167271
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default~iphone.png
+xPerftestsJsIOS/Resources/splash/Default~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection157"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default~iphone.png PerftestsJsIOS/Resources/splash/Default~iphone.png53b21cd9040fb741^bfd12ad9040fb741^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default~iphone.png0000000000000000^795"CopyPNGFile "DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default~iphone.png" "PerftestsJsIOS/Resources/splash/Default~iphone.png"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/splash/Default~iphone.png" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Default~iphone.png"36"E92B78C4-6902-4206-8C18-520F83B18AB2-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon-72.png PerftestsJsIOS/Resources/icons/icon-72.png
+s386860248.348589
+e386860248.432672
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon-72.png
+xPerftestsJsIOS/Resources/icons/icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection142"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon-72.png PerftestsJsIOS/Resources/icons/icon-72.png265759d8040fb741^33c36ed8040fb741^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon-72.png0000000000000000^757"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon-72.png PerftestsJsIOS/Resources/icons/icon-72.png    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon-72.png /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon-72.png36"49E8C9F4-0CC0-4FE8-AFA6-766A0D6CE97A-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon.png PerftestsJsIOS/Resources/icons/icon.png
+s386860248.352721
+e386860248.431846
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon.png
+xPerftestsJsIOS/Resources/icons/icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon.png PerftestsJsIOS/Resources/icons/icon.png17615ad8040fb741^bb986ed8040fb741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon.png0000000000000000^745"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon.png PerftestsJsIOS/Resources/icons/icon.png    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon.png /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon.png36"ABC130FA-7C8A-4A8B-88CA-78AAC42A5514-
+
+CCopyPNGFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon@2x.png PerftestsJsIOS/Resources/icons/icon@2x.png
+s386860248.433088
+e386860248.493326
+r1
+xCopyPNGFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon@2x.png
+xPerftestsJsIOS/Resources/icons/icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection142"CopyPNGFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon@2x.png PerftestsJsIOS/Resources/icons/icon@2x.pngd4f36ed8040fb741^274a7ed8040fb741^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon@2x.png0000000000000000^765"CopyPNGFile "DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon@2x.png" "PerftestsJsIOS/Resources/icons/icon@2x.png"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/icons/icon@2x.png" "/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/icon@2x.png"36"A76435CF-55EE-4EDE-81B4-0C5E6A563C2C-
+
+CCopyStringsFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/de.lproj/Localizable.strings PerftestsJsIOS/Resources/de.lproj/Localizable.strings
+s386860248.498124
+e386860248.501570
+r1
+xCopyStringsFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/de.lproj/Localizable.strings
+xPerftestsJsIOS/Resources/de.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy PerftestsJsIOS/Resources/de.lproj/Localizable.strings20987fd8040fb741^d26e80d8040fb741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/de.lproj/Localizable.strings0000000000000000^718"CopyStringsFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/de.lproj/Localizable.strings PerftestsJsIOS/Resources/de.lproj/Localizable.strings    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/de.lproj -- PerftestsJsIOS/Resources/de.lproj/Localizable.strings36"1450AD7F-F071-4FA3-A2D4-2B4F37644FB5-
+
+CCopyStringsFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/en.lproj/Localizable.strings PerftestsJsIOS/Resources/en.lproj/Localizable.strings
+s386860248.444859
+e386860248.492253
+r1
+xCopyStringsFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/en.lproj/Localizable.strings
+xPerftestsJsIOS/Resources/en.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy PerftestsJsIOS/Resources/en.lproj/Localizable.stringsadf971d8040fb741^630a7ed8040fb741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/en.lproj/Localizable.strings0000000000000000^718"CopyStringsFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/en.lproj/Localizable.strings PerftestsJsIOS/Resources/en.lproj/Localizable.strings    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/en.lproj -- PerftestsJsIOS/Resources/en.lproj/Localizable.strings36"76E22AF6-F943-4952-BD5A-E3E2E98CC55C-
+
+CCopyStringsFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/es.lproj/Localizable.strings PerftestsJsIOS/Resources/es.lproj/Localizable.strings
+s386860248.493584
+e386860248.496818
+r1
+xCopyStringsFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/es.lproj/Localizable.strings
+xPerftestsJsIOS/Resources/es.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy PerftestsJsIOS/Resources/es.lproj/Localizable.strings6d747ed8040fb741^05367fd8040fb741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/es.lproj/Localizable.strings0000000000000000^718"CopyStringsFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/es.lproj/Localizable.strings PerftestsJsIOS/Resources/es.lproj/Localizable.strings    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/es.lproj -- PerftestsJsIOS/Resources/es.lproj/Localizable.strings36"DE4E5103-A397-4E21-9DD1-C1ACA3712FC5-
+
+CCopyStringsFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/se.lproj/Localizable.strings PerftestsJsIOS/Resources/se.lproj/Localizable.strings
+s386860248.502804
+e386860248.524040
+r1
+xCopyStringsFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/se.lproj/Localizable.strings
+xPerftestsJsIOS/Resources/se.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy PerftestsJsIOS/Resources/se.lproj/Localizable.strings3acb80d8040fb741^c42686d8040fb741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/se.lproj/Localizable.strings0000000000000000^718"CopyStringsFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/se.lproj/Localizable.strings PerftestsJsIOS/Resources/se.lproj/Localizable.strings    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/se.lproj -- PerftestsJsIOS/Resources/se.lproj/Localizable.strings36"B71D330E-4E61-47C9-9602-CDEEE6DAF10A-
+
+CCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/ResourceRules.plist
+s386860247.812300
+e386860247.817211
+r1
+xCpResource
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist
+xDerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/ResourceRules.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/ResourceRules.plist2008d0d7040fb741^3e3ed1d7040fb741^---0#0#0#-19%DVTDocumentLocation2@169"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/ResourceRules.plist000000000080d041^850"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/ResourceRules.plist    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app36"D1712208-EEE6-4B89-92F8-87C35EADA2E3-
+
+CCpResource PerftestsJsIOS/Resources/Capture.bundle DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Capture.bundle
+s386860248.433563
+e386860248.443615
+r1
+xCpResource
+xPerftestsJsIOS/Resources/Capture.bundle
+xDerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Capture.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Copy DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Capture.bundleaa0c6fd8040fb741^ed9d71d8040fb741^---0#0#0#-19%DVTDocumentLocation2@164"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Capture.bundle000000000080d041^739"CpResource PerftestsJsIOS/Resources/Capture.bundle DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Capture.bundle    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/Resources/Capture.bundle /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app36"CAFC4A40-EC45-4D41-B21D-C8FDCB5139C2-
+
+CCpResource PerftestsJsIOS/config.xml DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/config.xml
+s386860248.347911
+e386860248.351094
+r1
+xCpResource
+xPerftestsJsIOS/config.xml
+xDerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/config.xml
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/config.xml512e59d8040fb741^4ce159d8040fb741^---0#0#0#-19%DVTDocumentLocation2@160"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/config.xml000000000080d041^707"CpResource PerftestsJsIOS/config.xml DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/config.xml    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/config.xml /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app36"E36C296A-A698-4E33-9934-CD93C15E833B-
+
+CCreateUniversalBinary /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS normal "armv7 armv7s"
+s386860252.335383
+e386860252.560715
+r1
+xCreateUniversalBinary
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS
+xnormal
+xarmv7 armv7s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection172"Create universal binary /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS210656dc040fb741^5d8a8fdc040fb741^---0#0#0#-19%DVTDocumentLocation2@164"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS000000000080d041^959"CreateUniversalBinary DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS normal "armv7 armv7s"    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    lipo -create /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS -output /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS36"0EDFA3F8-D493-40C7-95FD-2EA31616988E-
+
+CGenerateDSYMFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app.dSYM /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS
+s386860252.567630
+e386860252.929584
+r1
+xGenerateDSYMFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app.dSYM
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Generate /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app.dSYM8f6d91dc040fb741^5b08eedc040fb741^---0#0#0#-19%DVTDocumentLocation2@154"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app.dSYM000000000080d041^833"GenerateDSYMFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app.dSYM DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PerftestsJsIOS -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app.dSYM36"BC959689-D6C3-458C-9A83-C33433B9B675-
+
+CLd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS normal armv7
+s386860249.879984
+e386860252.328464
+r1
+xLd
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS
+xnormal
+xarmv7
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection202"Link /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOSe465e1d9040fb741^471e54dc040fb741^---0#0#0#--2025"Ld DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS normal armv7    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -L/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -filelist /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS.LinkFileList -dead_strip -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C -fobjc-link-runtime -miphoneos-version-min=5.0 -framework AssetsLibrary /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS36"08DE8D1B-A63E-4A6C-8160-73B1EC387E83-
+
+CLd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS normal armv7s
+s386860249.986777
+e386860252.326509
+r1
+xLd
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS
+xnormal
+xarmv7s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection203"Link /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS73bafcd9040fb741^1cd353dc040fb741^---0#0#0#--2030"Ld DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS normal armv7s    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -L/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -filelist /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS.LinkFileList -dead_strip -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C -fobjc-link-runtime -miphoneos-version-min=5.0 -framework AssetsLibrary /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS36"D7EA9936-7E63-4628-A0D4-CA36BC60002B-
+
+CPhaseScriptExecution "Copy www directory" /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Script-304B58A110DAC018002A0835.sh
+s386860247.826408
+e386860248.339685
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.472s
+ouser	0m0.161s
+osys	0m0.180s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'bda9d4d7040fb741^c3f356d8040fb741^-42"real	0m0.472suser	0m0.161ssys	0m0.180s3(21%IDEActivityLogMessage2@14"real	0m0.472s-386860248#1#14#-0#-----2@14"user	0m0.161s-386860248#15#14#-0#-----2@13"sys	0m0.180s-386860248#29#13#-0#-----0#0#0#--23732"PhaseScriptExecution "Copy www directory" DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Script-304B58A110DAC018002A0835.sh    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv ACTION build    setenv AD_HOC_CODE_SIGNING_ALLOWED NO    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER admin    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS "armv7 armv7s"    setenv ARCHS_STANDARD_32_64_BIT "armv7 armv7s"    setenv ARCHS_STANDARD_32_BIT "armv7 armv7s"    setenv ARCHS_UNIVERSAL_IPHONE_OS "armv7 armv7s"    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products    setenv BUILD_ROOT /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos    setenv CACHE_ROOT /var/folders/d_/v0g698xs3c7dl544qm8yxcy80000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/d_/v0g698xs3c7dl544qm8yxcy80000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app    setenv CODE_SIGNING_ALLOWED YES    setenv CODE_SIGNING_REQUIRED YES    setenv CODE_SIGN_CONTEXT_CLASS XCiPhoneOSCodeSignContext    setenv CODE_SIGN_IDENTITY "iPhone Developer"    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/d_/v0g698xs3c7dl544qm8yxcy80000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos    setenv CONFIGURATION_TEMP_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos    setenv CONTENTS_FOLDER_PATH PerftestsJsIOS.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH armv7s    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH PerftestsJsIOS.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/PerftestsJsIOS.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME PerftestsJsIOS.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos    setenv EFFECTIVE_PLATFORM_NAME -iphoneos    setenv EMBEDDED_PROFILE_NAME embedded.mobileprovision    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENTITLEMENTS_ALLOWED YES    setenv ENTITLEMENTS_REQUIRED YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH PerftestsJsIOS.app/Executables    setenv EXECUTABLE_FOLDER_PATH PerftestsJsIOS.app    setenv EXECUTABLE_NAME PerftestsJsIOS    setenv EXECUTABLE_PATH PerftestsJsIOS.app/PerftestsJsIOS    setenv FILE_LIST /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH PerftestsJsIOS.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME PerftestsJsIOS.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER PerftestsJsIOS/PerftestsJsIOS-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include\" \"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include\" \"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include\" \"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE PerftestsJsIOS/PerftestsJsIOS-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH PerftestsJsIOS.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH PerftestsJsIOS.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/PerftestsJsIOS.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER admin    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/PerftestsJsIOS.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH PerftestsJsIOS.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-LinkMap-normal-armv7s.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_armv7 /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7/PerftestsJsIOS.LinkFileList    setenv LINK_FILE_LIST_normal_armv7s /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal/armv7s/PerftestsJsIOS.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH PerftestsJsIOS.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12C60    setenv MAC_OS_X_VERSION_ACTUAL 1082    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0802    setenv NATIVE_ARCH armv7    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Objects-normal    setenv OBJROOT /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH PerftestsJsIOS.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PkgInfo    setenv PKGINFO_PATH PerftestsJsIOS.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform    setenv PLATFORM_NAME iphoneos    setenv PLATFORM_PREFERRED_ARCH armv7    setenv PLATFORM_PRODUCT_BUILD_VERSION 10B141    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH PerftestsJsIOS.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH PerftestsJsIOS.app/PrivateHeaders    setenv PRODUCT_NAME PerftestsJsIOS    setenv PRODUCT_SETTINGS_PATH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/PerftestsJsIOS-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT PerftestsJsIOS    setenv PROJECT_DERIVED_FILE_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/DerivedSources    setenv PROJECT_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PROJECT_FILE_PATH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS.xcodeproj    setenv PROJECT_NAME PerftestsJsIOS    setenv PROJECT_TEMP_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build    setenv PROJECT_TEMP_ROOT /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates    setenv PROVISIONING_PROFILE_REQUIRED YES    setenv PUBLIC_HEADERS_FOLDER_PATH PerftestsJsIOS.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv RESOURCE_RULES_REQUIRED YES    setenv REZ_COLLECTOR_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH PerftestsJsIOS.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk    setenv SDK_NAME iphoneos6.1    setenv SDK_PRODUCT_BUILD_VERSION 10B141    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH PerftestsJsIOS.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH PerftestsJsIOS.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv SRCROOT /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME PerftestsJsIOS    setenv TARGET_BUILD_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos    setenv TARGET_NAME PerftestsJsIOS    setenv TARGET_TEMP_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build    setenv TEMP_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build    setenv TEMP_FILES_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build    setenv TEMP_FILE_DIR /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build    setenv TEMP_ROOT /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH PerftestsJsIOS.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER admin    setenv USER_APPS_DIR /Users/admin/Applications    setenv USER_LIBRARY_DIR /Users/admin/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "armv7 armv7s"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH PerftestsJsIOS.app/version.plist    setenv VERSION_INFO_BUILDER admin    setenv VERSION_INFO_FILE PerftestsJsIOS_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:PerftestsJsIOS  PROJECT:PerftestsJsIOS-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME PerftestsJsIOS.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H127    setenv XCODE_VERSION_ACTUAL 0460    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    /bin/sh -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/Script-304B58A110DAC018002A0835.sh36"F3F40199-6CCA-41FE-8478-903C712EB6CD-
+
+CProcessInfoPlistFile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Info.plist PerftestsJsIOS/PerftestsJsIOS-Info.plist
+s386860247.812833
+e386860247.818468
+r1
+xProcessInfoPlistFile
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Info.plist
+xPerftestsJsIOS/PerftestsJsIOS-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Process PerftestsJsIOS/PerftestsJsIOS-Info.plist9128d0d7040fb741^9692d1d7040fb741^-203"warning: invalid character '_' in Bundle Identifier at column 23. This string must be a uniform type identifier (UTI) that contains only alphanumeric (A-Z,a-z,0-9), hyphen (-), and period (.) characters.1(21%IDEActivityLogMessage2@194"invalid character '_' in Bundle Identifier at column 23. This string must be a uniform type identifier (UTI) that contains only alphanumeric (A-Z,a-z,0-9), hyphen (-), and period (.) characters.102"Invalid character '_' in Bundle Identifier at column 23. This string must be a uniform type identifier386860247#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#26"Info.plist Utility Warning--0#0#0#-19%DVTDocumentLocation4@114"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/PerftestsJsIOS-Info.plist0000000000000000^1002"ProcessInfoPlistFile DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Info.plist PerftestsJsIOS/PerftestsJsIOS-Info.plist    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility PerftestsJsIOS/PerftestsJsIOS-Info.plist -genpkginfo /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/ResourceRules.plist -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/Info.plist36"44FF8F7D-5BA2-43EC-BB26-5DA5B234C71A-
+
+CProcessPCH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch.pth PerftestsJsIOS/PerftestsJsIOS-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s386860249.294200
+e386860249.690155
+r1
+xProcessPCH
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch.pth
+xPerftestsJsIOS/PerftestsJsIOS-Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile PerftestsJsIOS/PerftestsJsIOS-Prefix.pch8e734bd9040fb741^98c1b0d9040fb741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/PerftestsJsIOS-Prefix.pch0000000000000000^4178"ProcessPCH DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch.pth PerftestsJsIOS/PerftestsJsIOS-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-generated-files.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-own-target-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-all-target-headers.hmap -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-project-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources/armv7 -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos --serialize-diagnostics /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch.dia -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/PerftestsJsIOS-Prefix.pch -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch.pth -MMD -MT dependencies -MF /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-brhkmnmejiuibhepndpkmypjnxfj/PerftestsJsIOS-Prefix.pch.d36"F3570B9F-D013-44A1-9543-7628DF6F6311-
+
+CProcessPCH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch.pth PerftestsJsIOS/PerftestsJsIOS-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s386860249.294828
+e386860249.665207
+r1
+xProcessPCH
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch.pth
+xPerftestsJsIOS/PerftestsJsIOS-Prefix.pch
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile PerftestsJsIOS/PerftestsJsIOS-Prefix.pch53944bd9040fb741^304caad9040fb741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/PerftestsJsIOS-Prefix.pch0000000000000000^4181"ProcessPCH DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch.pth PerftestsJsIOS/PerftestsJsIOS-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-generated-files.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-own-target-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-all-target-headers.hmap -iquote /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS-project-headers.hmap -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/usr/local/lib/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/UninstalledProducts/include -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources/armv7s -I/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/DerivedSources -F/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos --serialize-diagnostics /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch.dia -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/PerftestsJsIOS/PerftestsJsIOS-Prefix.pch -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch.pth -MMD -MT dependencies -MF /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PrecompiledHeaders/PerftestsJsIOS-Prefix-ezmtyisvxxuxgaaevefukrunriuy/PerftestsJsIOS-Prefix.pch.d36"85D685CA-E573-44A6-B691-E2553C9772DA-
+
+CProcessPCH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Index/PrecompiledHeaders/PerftestsJsIOS-Prefix-afbuqeywwztfjeccxkwqlwvzskis_ast/PerftestsJsIOS-Prefix.pch.pth PerftestsJsIOS/PerftestsJsIOS-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Index/PrecompiledHeaders/PerftestsJsIOS-Prefix-aqtysugzvbdixyfpwfoeopllhyjx_ast/PerftestsJsIOS-Prefix.pch.pth PerftestsJsIOS/PerftestsJsIOS-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessProductPackaging "/Users/admin/Library/MobileDevice/Provisioning Profiles/9EAEF8FE-3130-4437-AD94-C72CB371B9BE.mobileprovision" /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision
+s386860252.979746
+e386860252.994985
+r1
+xProcessProductPackaging
+x/Users/admin/Library/MobileDevice/Provisioning Profiles/9EAEF8FE-3130-4437-AD94-C72CB371B9BE.mobileprovision
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection235"ProcessProductPackaging "/Users/admin/Library/MobileDevice/Provisioning Profiles/9EAEF8FE-3130-4437-AD94-C72CB371B9BE.mobileprovision" DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision91effadc040fb741^b3b5fedc040fb741^---0#0#0#-19%DVTDocumentLocation2@174"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision0000000000000000^798"ProcessProductPackaging "/Users/admin/Library/MobileDevice/Provisioning Profiles/9EAEF8FE-3130-4437-AD94-C72CB371B9BE.mobileprovision" DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility "/Users/admin/Library/MobileDevice/Provisioning Profiles/9EAEF8FE-3130-4437-AD94-C72CB371B9BE.mobileprovision" -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app/embedded.mobileprovision36"5B939A1D-2CAD-4186-8724-E5A95523162B-
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS.xcent
+s386860253.035103
+e386860253.040974
+r0
+xProcessProductPackaging
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection269"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS.xcent121209dd040fb741^397c0add040fb741^-156"(null): error: CFBundleIdentifier 'de.objectcode.perftests_js_ios' contains illegal character '_' invalid bundle identifier 'de.objectcode.perftests_js_ios'1(21%IDEActivityLogMessage2@98"(null): error: CFBundleIdentifier 'de.objectcode.perftests_js_ios' contains illegal character '_' -386860253#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#---0#0#0#-19%DVTDocumentLocation4@198"file://localhost/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS.xcent000000000080d041^892"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS.xcent    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist -entitlements -format xml -o /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Intermediates/PerftestsJsIOS.build/Debug-iphoneos/PerftestsJsIOS.build/PerftestsJsIOS.xcent36"2A2BC82F-E6C4-453A-A4B8-C229E751A088-
+
+CTouch /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app
+s386860253.002506
+e386860253.027434
+r1
+xTouch
+x/Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection139"Touch /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app99b900dd040fb741^d50607dd040fb741^---0#0#0#--491"Touch DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app    cd /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/admin/Documents/JsMobilePerformance/PerftestsJsIOS/DerivedData/PerftestsJsIOS/Build/Products/Debug-iphoneos/PerftestsJsIOS.app36"8FFBCEEE-0F97-4C1E-A525-30758A48CFEC-
+
