@@ -16,7 +16,6 @@ target/
 .target/
 .settings/
 tmp/
-.metadata/
 
 # Local configuration file (sdk path, etc)
 local.properties
