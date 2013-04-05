@@ -58,7 +58,7 @@ module('perftestsjs.tests').binarytrees = (function() {
 	return {
 		start : startFN,
 		stop : stopFN,
-		name : "Strings"
+		name : "BinaryTrees"
 	}
 
 })();
