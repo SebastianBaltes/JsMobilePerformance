@@ -1,0 +1,5 @@
+package de.objectcode.perftests.utils;
+
+public class Measurement {
+
+}

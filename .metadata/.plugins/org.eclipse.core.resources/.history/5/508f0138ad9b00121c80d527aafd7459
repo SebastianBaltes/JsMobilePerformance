@@ -1,0 +1,11 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.Map;
+
+public class Part {
+	private Long id;
+	private String name;
+	private String businessKey;
+	private String description;
+	private Map<String,String> properties;
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;HoughCircleDetection.java&apos; to &apos;PerftestsAndroid/src/de.objectcode.perftests.houghcircle&apos;&#x0A;- Original project: &apos;PottFoucault_New&apos;&#x0A;- Destination element: &apos;PerftestsAndroid/src/de.objectcode.perftests.houghcircle&apos;&#x0A;- Original element: &apos;foucault.utils.circlefinder.HoughCircleDetection.java&apos;" description="Copy compilation unit" destination="=PerftestsAndroid/src&lt;de.objectcode.perftests.houghcircle" element1="/src&lt;foucault.utils.circlefinder{HoughCircleDetection.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1364985894280" units="1" version="1.0"/>
+</session>

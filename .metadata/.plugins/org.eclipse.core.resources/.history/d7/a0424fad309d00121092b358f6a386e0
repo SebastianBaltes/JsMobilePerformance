@@ -1,0 +1,52 @@
+module('perftestsjs.tests').strings = (function() {
+
+	var rnd;
+	var text;
+
+	function splitEs() {
+		var w = new StopWatch();
+		log("split 'e'");
+		var parts = text.split("e");
+		log("into "+parts.length+" parts");
+		log(w.stop());
+	}
+
+	function replaceRandomRegexpTest() {
+		var w = new StopWatch();
+		log("compile, search and replace 100 regexps");
+		var result = text;
+		for (var i = 0; i < 100; i++) {
+			result = result.replaceAll("["+rnd.nextString(10).toLowerCase()+"]{1,2}[aeiou]+\\s+", rnd.nextString(10));
+		}
+		log(w.stop());
+	}
+
+	function appendTest() {
+		var w = new StopWatch();
+		log("appending 10000 words into a String");
+		var b = new StringBuilder();
+		for (var i = 0; i < 10000; i++) {
+			b.append(rnd.nextTextWord());
+			b.append(" ");
+		}
+		text = b.toString();
+		log(w.stop());
+	}
+		
+	function startFN() {
+		rnd = new RandomValues();
+		appendTest();
+		splitEs();
+		replaceRandomRegexpTest();
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "Strings"
+	}
+
+})();

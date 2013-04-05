@@ -1,0 +1,14 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.Date;
+
+public class Item {
+	private Long id;
+	private String name;
+	private String businessKey;
+	private Date start;
+	private Date end;
+	private String description;
+	private Double width;
+	private Double height;
+}

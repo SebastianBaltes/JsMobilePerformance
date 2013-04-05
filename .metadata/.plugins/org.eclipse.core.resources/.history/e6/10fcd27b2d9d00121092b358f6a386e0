@@ -1,0 +1,12 @@
+function StopWatch() {
+	this.t0 = 0;
+	this.t1 = 0;
+	this.start();
+}
+StopWatch.prototype.start = function(o) {
+	this.t0 = new Date().getTime();
+};
+StopWatch.prototype.stop = function(o) {
+	this.t1 = new Date().getTime();
+	return "time: \t"+(this.t1-this.t0)+" ms";
+};

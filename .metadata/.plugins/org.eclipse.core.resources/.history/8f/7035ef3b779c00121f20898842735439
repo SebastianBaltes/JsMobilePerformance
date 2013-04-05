@@ -1,0 +1,48 @@
+package de.objectcode.surplex.service;
+
+import java.net.UnknownHostException;
+
+import org.json.JSONObject;
+
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
+import android.widget.Toast;
+import de.objectcode.surplex.App;
+import de.objectcode.surplex.R;
+import de.objectcode.surplex.utils.Utils;
+
+public abstract class JsonCallback {
+  
+  private FragmentActivity activity;
+  
+  public JsonCallback(FragmentActivity activity) {
+    this.activity = activity;
+  }
+
+  public abstract void onSuccess(JSONObject result);
+
+  public void onException(Exception e) {
+    Log.w(App.LOGTAG, "exception occured " + e.toString(), e);
+    int textR;
+    if (!Utils.isOnline(activity)) {
+      // Keine Internetverbindung!
+      textR = R.string.LoginStatus_networkOffline2;
+    } else if (e instanceof UnknownHostException) {
+      // Kein Netz verfügbar oder surplex-Service nicht erreichbar
+      textR = R.string.LoginStatus_networkOffline1;
+    } else {
+      // Service temporär nicht verfügbar
+      textR = R.string.LoginStatus_webserviceCorrupt;
+    }
+    Toast.makeText(activity, textR, Toast.LENGTH_LONG).show();
+  }
+
+  public void onStatusNotOk(int statusCode, String message) {
+    Log.w(App.LOGTAG, statusCode + " (" + message + ")");
+  }
+
+  public void onAbort() {
+    Log.i(App.LOGTAG, "request was aborted");
+  }
+
+}

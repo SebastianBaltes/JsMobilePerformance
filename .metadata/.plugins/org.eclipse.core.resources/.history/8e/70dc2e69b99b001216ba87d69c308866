@@ -1,0 +1,23 @@
+package de.objectcode.perftests.strings;
+
+import de.objectcode.perftests.utils.RandomValues;
+import de.objectcode.perftests.utils.ShowLogActivity;
+import de.objectcode.perftests.utils.StopWatch;
+
+public class StringActivity extends ShowLogActivity {
+	String[] words = new String[] {
+			
+	};
+	@Override
+	public void perform() {
+		RandomValues rnd = new RandomValues();
+		StopWatch w = new StopWatch();
+		log("appending 10000 words into a String");
+		StringBuilder b = new StringBuilder();
+		for (int i = 0; i < 10000; i++) {
+			b.append(rnd.nextTextWord());
+		}
+		String s = b.toString();
+		log(w.stop());
+	}
+}

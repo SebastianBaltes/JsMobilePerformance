@@ -1,0 +1,11 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.Date;
+
+public class User {
+	private Long id;
+	private String name;
+	private String email;
+	private Date birthday;
+	private Address address;
+}

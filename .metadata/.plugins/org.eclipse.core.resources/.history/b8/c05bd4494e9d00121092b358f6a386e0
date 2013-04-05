@@ -1,0 +1,18 @@
+module('perftestsjs.tests').longscrolllist = (function() {
+
+	function startFN() {
+		var ul = $('#LongScrollListPage > ul');
+		ul.empty();
+		ul.listview("refresh");
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "LongScrollList"
+	}
+
+})();

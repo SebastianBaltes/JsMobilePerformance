@@ -1,0 +1,54 @@
+package de.objectcode.perftests;
+
+import de.objectcode.perftests.houghcircle.HoughCircleActivity;
+import de.objectcode.perftests.lotofobjects.LotOfObjectsActivity;
+import de.objectcode.perftests.mandelbrot.MandelbrotActivity;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class TestListActivity extends ListActivity {
+
+	Test[] tests = new Test[] {
+			new Test(MandelbrotActivity.class),
+			new Test(LotOfObjectsActivity.class),
+			new Test(StringActivity.class),
+			new Test(HoughCircleActivity.class),
+			new Test(BinaryTreesActivity.class)
+	};
+
+	public void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
+		ArrayAdapter<Test> adapter = new ArrayAdapter<Test>(this, android.R.layout.simple_list_item_1, tests);
+		setListAdapter(adapter);
+	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		tests[position].start();
+	}
+
+	class Test {
+		private Class<? extends Activity> activity;
+		
+		public Test(Class<? extends Activity> activity) {
+			this.activity = activity;
+		}
+		
+		public void start() {
+			Intent intent = new Intent(TestListActivity.this, activity);
+			Toast.makeText(this, "starting "+this, Toast.LENGTH_SHORT);
+			startActivity(intent);
+		}
+		
+		public String toString() {
+			return activity.getSimpleName();
+		}
+	}
+	
+}

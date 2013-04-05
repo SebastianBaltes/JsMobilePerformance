@@ -1,0 +1,19 @@
+module('perftestsjs.tests').binarytrees = (function() {
+
+	function startFN() {
+		rnd = new RandomValues();
+		appendTest();
+		splitEs();
+		replaceRandomRegexpTest();
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "Strings"
+	}
+
+})();

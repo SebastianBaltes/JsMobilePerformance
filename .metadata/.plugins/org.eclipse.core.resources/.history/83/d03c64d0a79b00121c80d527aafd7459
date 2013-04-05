@@ -1,0 +1,5 @@
+package de.objectcode.perftests.lotofobjects;
+
+public class LotOfObjectsActivity {
+
+}

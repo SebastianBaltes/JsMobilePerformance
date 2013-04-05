@@ -1,0 +1,15 @@
+module('perftestsjs.tests').manyobjects = (function() {
+
+	function startFN() {
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "ManyObjects"
+	}
+
+})();

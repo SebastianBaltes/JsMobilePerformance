@@ -1,0 +1,22 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.Map;
+
+public class Part implements Dummy {
+	private Long id;
+	private String name;
+	private String businessKey;
+	private String description;
+	private Map<String,String> properties;
+	
+	@Override
+	public void fillDummyValues(RandomValues rnd) {
+		id = rnd.nextLong();
+		name = rnd.nextString(20);
+		businessKey = rnd.nextString(10);
+		description = rnd.nextString(100);
+		for (int i = 0; i < 10; i++) {
+			properties.put(rnd.nextString(10), rnd.nextString(20));
+		}
+	}
+}

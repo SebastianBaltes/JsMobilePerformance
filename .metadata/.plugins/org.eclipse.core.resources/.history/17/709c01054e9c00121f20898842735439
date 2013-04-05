@@ -1,0 +1,141 @@
+package de.objectcode.perftests.houghcircle;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.graphics.Bitmap;
+import android.graphics.Point;
+
+public class HoughCircleDetection {
+
+	public int radius = 50;
+
+	public float treshold = 1;
+
+	int[][] imageValues;
+
+	double[][] houghValues;
+
+	int[] sobelCoordsX;
+
+	int[] sobelCoordsY;
+
+	double[] sobelValues;
+
+	int soebelEdges;
+
+	int width;
+
+	int height;
+
+	public void transform(Bitmap image) {
+		width = image.getWidth();
+		height = image.getHeight();
+		int[] rgb = new int[width * height];
+		image.getPixels(rgb, 0, width, 0, 0, width, height);
+		setImage2DGrayArray(rgb);
+		fillSobelField();
+		circle = findCircleWithRadius(new HoughCircle(radius));
+		System.out.println(circle);
+	}
+
+	private void setImage2DGrayArray(int[] arr) {
+		imageValues = new int[width][height];
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				int pixel = arr[x + y * width];
+		        int R = (pixel >> 16) & 0xFF;
+		        int G = (pixel >> 8) & 0xFF;
+		        int B = pixel & 0xFF;
+		        int gray = (R+G+B)/3;
+				imageValues[x][y] = gray;
+			}
+		}
+	}
+
+	private void fillSobelField() {
+		int min = 1;
+		int maxW = width - min;
+		int maxH = height - min;
+		int maxSoebelSize = width * height;
+		sobelCoordsX = new int[maxSoebelSize];
+		sobelCoordsY = new int[maxSoebelSize];
+		sobelValues = new double[maxSoebelSize];
+		soebelEdges = 0;
+		for (int y = min; y < maxH; y++) {
+			for (int x = min; x < maxW; x++) {
+				double soebel = directionLessSobelEdgeDetectionValue(x, y);
+				if (soebel != 0) {
+					sobelCoordsX[soebelEdges] = x;
+					sobelCoordsY[soebelEdges] = y;
+					sobelValues[soebelEdges] = soebel;
+					soebelEdges++;
+				}
+			}
+		}
+	}
+
+	private List<Point> findCircleWithRadius(int radius, double threshold) {
+		// define circle shape
+		int numCirclePoints = 0;
+		int numPts = Math.round(8 * radius);
+		int[][] circleBorder = new int[2][numPts];
+		for (int i = 0; i < numPts; i++) {
+			double theta = 6.283185307179586 * i / numPts;
+			int xx = (int) Math.round(radius * Math.cos(theta));
+			int yy = (int) Math.round(radius * Math.sin(theta));
+			if (numCirclePoints == 0
+					| (xx != circleBorder[0][numCirclePoints] & yy != circleBorder[1][numCirclePoints])) {
+				circleBorder[0][numCirclePoints] = xx;
+				circleBorder[1][numCirclePoints] = yy;
+				numCirclePoints++;
+			}
+		}
+
+		// do huge transformation
+		houghValues = new double[width][height];
+		for (int i = 0; i < soebelEdges; i++) {
+			int x = sobelCoordsX[i];
+			int y = sobelCoordsY[i];
+			double sobel = sobelValues[i];
+			for (int j = 0; j < numCirclePoints; j++) {
+				int xCoord = x + circleBorder[0][j];
+				int yCoord = y + circleBorder[1][j];
+				if (xCoord >= 0 & xCoord < width & yCoord >= 0 & yCoord < height) {
+					houghValues[xCoord][yCoord] += sobel;
+				}
+			}
+		}
+
+		// get global huge maximum
+		List<Point> circles = new ArrayList<Point>();
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				if (houghValues[x][y] > threshold) {
+					circles.add(new Point(x,y));
+				}
+			}
+		}
+		return circles;
+	}
+
+	private double directionLessSobelEdgeDetectionValue(int xPos, int yPos) {
+		double sobelSum = 0.0;
+		int[][] d = new int[3][3];
+		for (int y = 0; y < 3; y++) {
+			for (int x = 0; x < 3; x++) {
+				d[x][y] = (imageValues[xPos + x - 1][yPos + y - 1]);
+			}
+		}
+		double sobelH = ((double) d[0][2] + (double) (2 * d[1][2]) + d[2][2]
+				- d[0][0] - (2 * d[1][0]) - d[2][0]);
+		double sobelV = ((double) d[2][0] + (double) (2 * d[2][1]) + d[2][2]
+				- d[0][0] - (2 * d[0][1]) - d[0][2]);
+		sobelSum = (Math.abs(sobelH) + Math.abs(sobelV)) / 2;
+		return sobelSum;
+	}
+
+}

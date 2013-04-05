@@ -1,0 +1,71 @@
+module('perftestsjs.tests').strings = (function() {
+
+	var rnd;
+	var text;
+
+	function splitEs() {
+		var w = new StopWatch();
+		log("split 'e'");
+		var parts = text.split("e");
+		log("into "+parts.length+" parts");
+		log(w.stop());
+	}
+
+	function replaceRandomRegexpTest() {
+		var w = new StopWatch();
+		log("compile, search and replace 100 regexps");
+		var result = text;
+		for (var i = 0; i < 10; i++) {
+			checksum(result);
+			var regexp = new RegExp("["+rnd.nextString(10).toLowerCase()+"]{1,2}[aeiou]+\\s+","g");
+			result = result.replace(regexp, rnd.nextString(10));
+		}
+        log(w.stop());
+        checksum(result);
+	}
+	
+	function checksum(result) {
+        log(result);
+		var w = new StopWatch();
+		var check = 0;
+		for (var i = 0; i < result.length; i++) {
+			check = (check + result.charCodeAt(i)) % 10000;
+		}
+		log("checksum: "+check);
+		log(w.stop());
+	}
+
+	function appendTest() {
+		var w = new StopWatch();
+		log("appending 10000 words into a String");
+		text = rnd.nextTextWithWords(10);
+		log("the string is "+text.length+" characters long");
+        checksum(text);
+		log(w.stop());
+	}
+		
+	function startFN() {
+//		var a = "In the above code,there is no sender email id. KIRAN: You'll need to look into how Intents work to understand this.";
+//		log(a);
+//		var regexp = new RegExp("["+"QWRTZPSDFGHJKLYXCVBNMqwrtzpsdfghjklyxcvbnm".toLowerCase()+"]{1,2}[aeiou]+\\s+","g");
+//        var b = a.replace(regexp, "###");
+//        log(b);
+//        checksum(b);
+		
+		
+		rnd = new RandomValues();
+		appendTest();
+		splitEs();
+		replaceRandomRegexpTest();
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "Strings"
+	}
+
+})();

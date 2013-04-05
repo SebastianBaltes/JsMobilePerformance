@@ -1,0 +1,105 @@
+package de.objectcode.perftests;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import de.objectcode.perftests.utils.RandomValues;
+import de.objectcode.perftests.utils.ShowLogActivity;
+import de.objectcode.perftests.utils.StopWatch;
+
+public class JsonRequestActivity extends ShowLogActivity {
+
+	RandomValues rnd;
+
+	@Override
+	public void perform() {
+		rnd = new RandomValues();
+		StopWatch w = new StopWatch();
+		log("split 'e'");
+		List<ResultObject> result = request("http://localhost:9000/"
+				+ rnd.nextInt());
+		log("returned " + result.size() + " objects");
+		log(w.stop());
+	}
+
+	public static class ResultObject {
+		String id;
+		String name;
+		String description;
+		Boolean flag;
+		Double real;
+		Map<String, String> properties = new HashMap<String, String>();
+		List<Long> values = new ArrayList<Long>();
+
+		public void parse(JSONObject o) {
+			id = o.optString("id");
+			name = o.optString("name");
+			description = o.optString("description");
+			flag = o.optBoolean("flag");
+			real = o.optDouble("real");
+			JSONObject props = o.optJSONObject("properties");
+			if (props != null) {
+				for (@SuppressWarnings("unchecked")
+				Iterator<String> i = props.keys(); i.hasNext();) {
+					String key = i.next();
+					properties.put(key, props.optString(key));
+				}
+			}
+			JSONArray valuesArray = o.optJSONArray("values");
+			if (valuesArray != null) {
+				for (int i = 0; i < valuesArray.length(); i++) {
+					values.add(valuesArray.optLong(i));
+				}
+			}
+		}
+	}
+
+	public List<ResultObject> request(String url) {
+		try {
+			HttpGet httpGet = new HttpGet(url);
+			StringBuilder builder = new StringBuilder();
+			HttpClient client = new DefaultHttpClient();
+			HttpResponse response = client.execute(httpGet);
+			StatusLine statusLine = response.getStatusLine();
+			int statusCode = statusLine.getStatusCode();
+			if (statusCode != 200) {
+				log("statusCode" + statusCode + "!=200");
+			}
+			HttpEntity entity = response.getEntity();
+			InputStream content = entity.getContent();
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					content));
+			String line;
+			while ((line = reader.readLine()) != null) {
+				builder.append(line);
+			}
+			List<ResultObject> result = new ArrayList<ResultObject>();
+			JSONArray json = new JSONArray(builder.toString());
+			for (int i = 0; i < json.length(); i++) {
+				JSONObject o = json.optJSONObject(i);
+				ResultObject r = new ResultObject();
+				r.parse(o);
+				result.add(r);
+			}
+			return result;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+}

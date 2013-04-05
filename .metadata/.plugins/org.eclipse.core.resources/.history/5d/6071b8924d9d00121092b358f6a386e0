@@ -1,0 +1,15 @@
+module('perftestsjs.tests').longscrolllist = (function() {
+
+	function startFN() {
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "LongScrollList"
+	}
+
+})();

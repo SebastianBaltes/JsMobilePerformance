@@ -1,0 +1,4 @@
+var logElement = $('#log');
+function log(s) {
+	logElement.text(logElement.text()+s+"\n");
+}

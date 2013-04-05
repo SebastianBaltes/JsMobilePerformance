@@ -1,0 +1,42 @@
+package controllers;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.node.ArrayNode;
+import org.codehaus.jackson.node.ObjectNode;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import play.libs.Json;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.index;
+
+public class Application extends Controller {
+  
+	public static class ResultObject {
+		String id;
+		String name;
+		String description;
+		Boolean flag;
+		Double real;
+		Map<String, String> properties = new HashMap<String, String>();
+		List<Integer> values = new ArrayList<Integer>();
+	}
+
+	
+    public static Result index(long seed) {
+    	RandomValues rnd = new RandomValues((int)seed);
+    	List<ResultObject> result = new ArrayList<>();
+    	while (result.size()<100) {
+    		ResultObject o = new ResultObject();
+    		result.add(o);
+    	}
+    	return ok(Json.toJson(result));
+    }
+  
+}

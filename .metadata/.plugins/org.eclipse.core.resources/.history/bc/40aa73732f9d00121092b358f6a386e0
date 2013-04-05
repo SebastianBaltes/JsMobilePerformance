@@ -1,0 +1,16 @@
+$(function() {
+	$.extend($.mobile, {
+		showToast: function(message,delay,callback) {
+			var oldMsg = $.mobile.loadingMessage;
+			$.mobile.showPageLoadingMsg("a", "Loading theme a...");			
+			if(delay && delay >0)
+			{
+				setTimeout(function(){
+					$.mobile.hideLoadingMessage();
+					if(callback) callback();
+				},delay);
+			}
+			
+		}
+	});
+})

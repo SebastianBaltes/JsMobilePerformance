@@ -1,0 +1,375 @@
+package de.objectcode.surplex.service;
+
+import java.io.UnsupportedEncodingException;
+import java.util.Locale;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.json.JSONObject;
+
+import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.location.Location;
+import android.net.Uri;
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+import de.objectcode.surplex.App;
+import de.objectcode.surplex.R;
+import de.objectcode.surplex.utils.Callback;
+import de.objectcode.surplex.utils.Callback1;
+import de.objectcode.surplex.utils.UrlBuilder;
+import de.objectcode.surplex.utils.Utils;
+import de.objectcode.surplex.view.tabflow.GoogleDocsPdfViewActivity;
+
+public class ServiceHelper {
+
+  Map<AsyncJsonRequest, Boolean> pendingRequestMap = new ConcurrentHashMap<AsyncJsonRequest, Boolean>();
+
+  public void login(final FragmentActivity activity, final String username, final String password, final Callback1<Boolean> callback) {
+    abortAll();
+    App.get(activity).removeLoginData();
+    perform(activity, true, request(activity, "login").addUserName(username).addPassword(password), new JsonCallback(activity) {
+      @Override
+      public void onSuccess(JSONObject result) {
+        JSONObject data = result.optJSONObject("data");
+        if (data == null) {
+          Log.w(App.LOGTAG, "login result: data is null!");
+        } else {
+          String username = data.optString("username");
+          String login_token = data.optString("login_token");
+          boolean is_tester = data.optInt("is_tester") == 1;
+          App.get(activity).setLoginData(username, password, login_token, is_tester);
+          Toast.makeText(activity, R.string.Login_successful, Toast.LENGTH_SHORT).show();
+          callback.call(true);
+        }
+      }
+
+      @Override
+      public void onStatusNotOk(int statusCode, String message) {
+        Toast.makeText(activity, R.string.Login_not_successful, Toast.LENGTH_SHORT).show();
+        callback.call(false);
+      }
+      
+      @Override
+      public void onAbort() {
+        super.onAbort();
+        callback.call(false);
+      }
+      
+      @Override
+      public void onException(Exception e) {
+        super.onException(e);
+        callback.call(false);
+      }
+    });
+  }
+
+  public void logout(final FragmentActivity activity, final Callback callback) {
+    abortAll();
+    perform(activity, true, request(activity, "logout").addUserName().addLoginToken(), new JsonCallback(activity) {
+      @Override
+      public void onSuccess(JSONObject result) {
+        App.get(activity).removeLoginData();
+        Toast.makeText(activity, R.string.logout_successful, Toast.LENGTH_SHORT).show();
+        callback.call();
+      }
+      
+      @Override
+      public void onStatusNotOk(int statusCode, String message) {
+        App.get(activity).removeLoginData();
+        Toast.makeText(activity, R.string.allready_logged_out, Toast.LENGTH_SHORT).show();
+        callback.call();
+      }
+    });
+  }
+
+  public void isLoggedIn(FragmentActivity activity, JsonCallback callback) {
+    perform(activity, true, request(activity, "is_logged_in").addUserName().addLoginToken(), callback);
+  }
+
+  public void auctionList(FragmentActivity activity, JsonCallback callback) {
+    abortAll();
+    perform(activity, false, request(activity, "auction_list").addUserName().addLoginToken().addImageSize(128, 128), callback);
+  }
+
+  public void auctionDetails(FragmentActivity activity, int auctionId, JsonCallback callback) {
+    abortAll();
+    perform(activity, true, request(activity, "auction_details").addUserName().addLoginToken().addAuctionId(auctionId)
+        .addImageSize(296, 212), callback);
+  }
+
+  public void articleList(FragmentActivity activity, int auctionId, JsonCallback callback) {
+    abortAll();
+    perform(activity, false, request(activity, "article_list").addUserName().addLoginToken().addAuctionId(auctionId)
+        .addImageSize(128, 128), callback);
+  }
+
+  public void articleList(FragmentActivity activity, ArticleListMode listMode, JsonCallback callback) {
+    abortAll();
+    perform(activity, false, request(activity, "article_list").addUserName().addLoginToken().addArticleListMode(listMode)
+        .addImageSize(128, 128), callback);
+  }
+
+  public void articleList(FragmentActivity activity, String searchTerm, JsonCallback callback) {
+    abortAll();
+    perform(activity, false,
+        request(activity, "article_list").addUserName().addLoginToken().addArticleListMode(ArticleListMode.search)
+            .addSearchKey(searchTerm).addImageSize(128, 128), callback);
+  }
+
+  public void articleDetails(FragmentActivity activity, int articleId, JsonCallback callback) {
+    abortAll();
+    perform(activity, true, request(activity, "article_details").addUserName().addLoginToken().addArticleId(articleId)
+        .addImageSize(296, 296), callback);
+  }
+
+  public void articleDetailsRefresh(FragmentActivity activity, int articleId, JsonCallback callback) {
+    perform(activity, true, request(activity, "article_details").addUserName().addLoginToken().addArticleId(articleId)
+        .addAct1(), callback);
+  }
+
+  public void isRegisteredForAuction(FragmentActivity activity, int auctionId, JsonCallback callback) {
+    perform(activity, true, 
+        request(activity, "is_registered_for_auction").addUserName().addLoginToken().addAuctionId(auctionId), callback);
+  }
+
+  public void registerForAuction(FragmentActivity activity, int auctionId, final Callback1<Boolean> callback) {
+    perform(activity, true, request(activity, "register_for_auction").addUserName().addLoginToken().addAuctionId(auctionId),
+      new JsonCallback(activity) {
+        @Override
+        public void onSuccess(JSONObject result) {
+          JSONObject data = result.optJSONObject("data");
+          boolean registered = data.optInt("registered")==1;
+          callback.call(registered);
+        }
+    });
+  }
+
+  public void placeBid(FragmentActivity activity, int articleId, int amount, JsonCallback callback) {
+    abortAll();
+    perform(activity, true,
+        request(activity, "place_bid").addUserName().addLoginToken().addArticleId(articleId).addAmount(amount),
+        callback);
+  }
+
+  public void articleWatch(FragmentActivity activity, int articleId, JsonCallback callback) {
+    perform(activity, true, request(activity, "article_watch").addUserName().addLoginToken().addArticleId(articleId),
+        callback);
+  }
+
+  protected void openBrowser(FragmentActivity activity, UrlBuilder ub) {
+    Log.d(App.LOGTAG, "showWebsite(" + ub + ")");
+    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(ub.toString()));
+    startActivity(activity, intent, activity.getString(R.string.surplex_website));
+  }
+
+  public void showMapsNavigation(FragmentActivity activity, String auctionLocation) {
+    UrlBuilder ub = new UrlBuilder("http://maps.google.com/");
+    Location currentLocation = App.get(activity).locationHelper.getLastBestLocation(activity);
+    if (currentLocation != null) {
+      ub.addParam("saddr",
+          String.format(Locale.US, "%1.6f,%1.6f", currentLocation.getLatitude(), currentLocation.getLongitude()));
+      ub.addParam("daddr", auctionLocation);
+    }
+    ub.addParam("daddr", auctionLocation);
+    openBrowser(activity, ub);
+  }
+
+  public void showUrl(FragmentActivity activity, String url) {
+    openBrowser(activity, new UrlBuilder(url));
+  }
+
+  public void showPdf(FragmentActivity activity, String url) {
+    Log.d(App.LOGTAG, "showPdf(" + url + ")");
+    Intent intent = new Intent(activity, GoogleDocsPdfViewActivity.class);
+    intent.putExtra(GoogleDocsPdfViewActivity.URL, url);
+    startActivity(activity, intent, activity.getString(R.string.Read_conditions));
+  }
+
+  public void openEMailClient(FragmentActivity activity, String emailTo, String subject, String text) {
+    Log.d(App.LOGTAG, "openEMailClient(emailTo='" + emailTo + "',subject='" + subject + "',text='" + text + "')");
+    Intent intent = new Intent(Intent.ACTION_SEND);
+    intent.setType("message/rfc822");
+    if (!Utils.isEmpty(emailTo)) {
+      intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] { emailTo });
+    }
+    if (!Utils.isEmpty(subject)) {
+      intent.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
+    }
+    if (!Utils.isEmpty(text)) {
+      intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
+    }
+    startActivity(activity, intent, activity.getString(R.string.Email));
+  }
+
+  public void callPhoneNumber(FragmentActivity activity, String phoneNumber) {
+    Log.d(App.LOGTAG, "callPhoneNumber(" + phoneNumber + ")");
+    Intent intent = new Intent(Intent.ACTION_CALL);
+    intent.setData(Uri.parse("tel:" + phoneNumber));
+    startActivity(activity, intent, activity.getString(R.string.Telephone));
+  }
+
+  public void maybeLogin(FragmentActivity activity, Callback1<Boolean> callback) {
+    if (App.get(activity).isLoggedIn()) {
+      callback.call(true);
+    } else {
+      showLoginDialog(activity, callback);
+    }
+  }
+
+  public void showLoginDialog(final FragmentActivity activity, final Callback1<Boolean> callback) {
+    AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+    LayoutInflater inflator = activity.getLayoutInflater();
+    View view = inflator.inflate(R.layout.dialog_login, (ViewGroup) activity.getCurrentFocus(), false);
+    builder.setView(view);
+
+    builder.setMessage(activity.getText(R.string.Login_at_surplex));
+    builder.setCancelable(true);
+
+    final TextView loginView = (TextView) view.findViewById(R.id.loginTV);
+    loginView.setText(App.get(activity).getUserName());
+    final TextView passwordView = (TextView) view.findViewById(R.id.passwordTV);
+    passwordView.setText(App.get(activity).getPassword());
+    builder.setPositiveButton(R.string.Login, new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+        login(activity, loginView.getText().toString(), passwordView.getText().toString(), callback);
+      }
+    });
+    builder.setNegativeButton(R.string.Cancel, new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+         callback.call(false);
+      }
+    });
+    AlertDialog dialog = builder.create();
+    dialog.show();
+  }
+
+  protected void startActivity(FragmentActivity activity, Intent intent, String actionName) {
+    try {
+      activity.startActivity(intent);
+    } catch (ActivityNotFoundException e) {
+      Log.w(App.LOGTAG, e.toString());
+      try {
+        activity.startActivity(Intent.createChooser(intent, actionName));
+      } catch (Exception e1) {
+        throw Utils.soften(e1);
+      }
+    } catch (Exception e) {
+      throw Utils.soften(e);
+    }
+  }
+
+  private FormPostRequestBuilder request(FragmentActivity activity, String request) {
+    return new FormPostRequestBuilder(activity).addRequest(request);
+  }
+
+  public void abortAll() {
+    for (AsyncJsonRequest request : pendingRequestMap.keySet()) {
+      request.abort();
+    }
+    pendingRequestMap.clear();
+  }
+
+  private void perform(FragmentActivity activity, final boolean showIndicator, FormPostRequestBuilder query, final JsonCallback callback) {
+    final SherlockFragmentActivity sherlockActivity = (SherlockFragmentActivity)activity;
+    if (showIndicator) {
+      sherlockActivity.runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+          sherlockActivity.setSupportProgressBarIndeterminateVisibility(true);
+        }
+      });
+    }
+    query.addLanguageCharacter().addAppVersion().addPlattform();
+    final HttpPost post = new HttpPost(App.get(activity).getWebserviceUrl());
+    post.setHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    post.setHeader("Accept-Encoding", "gzip, deflate");
+    post.setHeader("Accept-Language", App.get(activity).getLanguage());
+    post.setHeader("Accept", "*/*");
+    try {
+      post.setEntity(new UrlEncodedFormEntity(query.params, "UTF-8"));
+    } catch (UnsupportedEncodingException e) {
+      throw new RuntimeException(e);
+    }
+    AsyncJsonRequest request = new AsyncJsonRequest(post, new JsonCallback(activity) {
+      @Override
+      public void onSuccess(final JSONObject result) {
+        sherlockActivity.runOnUiThread(new Runnable() {
+          @Override
+          public void run() {
+            if (showIndicator) {
+              sherlockActivity.setSupportProgressBarIndeterminateVisibility(false);
+            }
+            pendingRequestMap.remove(post);
+            int resultCode = result.optInt("result");
+            // 101 rausnehmen
+            if (resultCode == 100 || resultCode == 101) {
+              callback.onSuccess(result);
+            } else {
+              String message = result.optString("error");
+              callback.onStatusNotOk(resultCode, message);
+            }
+          }
+        });
+      }
+
+      @Override
+      public void onException(final Exception e) {
+        sherlockActivity.runOnUiThread(new Runnable() {
+          @Override
+          public void run() {
+            if (showIndicator) {
+              sherlockActivity.setSupportProgressBarIndeterminateVisibility(false);
+            }
+            pendingRequestMap.remove(post);
+            callback.onException(e);
+          }
+        });
+      }
+
+      @Override
+      public void onStatusNotOk(final int statusCode, final String message) {
+        sherlockActivity.runOnUiThread(new Runnable() {
+          @Override
+          public void run() {
+            if (showIndicator) {
+              sherlockActivity.setSupportProgressBarIndeterminateVisibility(false);
+            }
+            pendingRequestMap.remove(post);
+            callback.onStatusNotOk(statusCode, message);
+          }
+        });
+      }
+    });
+    pendingRequestMap.put(request, Boolean.TRUE);
+  }
+
+  public void showRegistrationWebsite(FragmentActivity activity) {
+    showUrl(activity, App.get(activity).getRegistrationUrl());
+  }
+
+  public String getAppVersion(FragmentActivity activity) {
+    try {
+      return activity.getPackageManager().getPackageInfo(activity.getPackageName(), 0 ).versionName;
+    } catch (NameNotFoundException e) {
+      throw Utils.soften(e);
+    }
+  }
+  
+}

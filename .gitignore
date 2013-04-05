@@ -11,6 +11,11 @@
 # generated files
 bin/
 gen/
+logs/
+target/
+.target/
+.settings/
+tmp/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -18,3 +23,6 @@ local.properties
 # Eclipse project files
 .classpath
 .project
+
+RUNNING_PID
+

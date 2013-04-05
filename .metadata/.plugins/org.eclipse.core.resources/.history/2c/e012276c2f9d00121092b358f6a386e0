@@ -1,0 +1,18 @@
+$(function() {
+	$.extend($.mobile, {
+		showToast: function(message,delay,callback) {
+			var oldMsg = $.mobile.loadingMessage;
+			$.mobile.loadingMessage = message;
+			$.mobile.loading('show');
+			if(delay && delay >0)
+			{
+				setTimeout(function(){
+					$.mobile.loading('hide');
+					$.mobile.loadingMessage = oldMsg;
+					if(callback) callback();
+				},delay);
+			}
+			
+		}
+	});
+})

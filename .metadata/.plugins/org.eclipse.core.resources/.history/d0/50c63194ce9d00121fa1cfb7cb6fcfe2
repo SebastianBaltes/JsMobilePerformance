@@ -1,0 +1,32 @@
+package de.objectcode.perftests.utils;
+
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+
+public class PerfLog {
+    
+    private final static PerfLog instance = new PerfLog();
+    
+    public static PerfLog get() {
+        return instance;
+    }
+    
+    private StringBuilder b = new StringBuilder();
+    
+    public void log(String s) {
+        b.append(s).append('\n');
+    }
+    
+    public void sendMail(Context context) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Subject of email");
+        intent.putExtra(Intent.EXTRA_TEXT, "Body of email");
+        intent.setData(Uri.parse("mailto:baltes@objectcode.de"));
+        // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); 
+        context.startActivity(intent);        
+    }
+
+}

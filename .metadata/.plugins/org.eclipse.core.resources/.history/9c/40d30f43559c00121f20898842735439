@@ -1,0 +1,26 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import de.objectcode.perftests.utils.RandomValues;
+
+public class Shop implements Dummy {
+	public Map<String,Item> items = new HashMap<String,Item>();
+	public Map<String,User> users = new HashMap<String,User>();
+	@Override
+	public void fillDummyValues(RandomValues rnd) {
+		for (int i = 0; i < 200; i++) {
+			Item item = new Item();
+			item.fillDummyValues(rnd);
+			items.put(item.getBusinessKey(), item);
+		}
+		for (int i = 0; i < 200; i++) {
+			User user = new User();
+			user.fillDummyValues(rnd);
+			users.put(user.getEmail(), user);
+		}
+	}
+	
+	
+}

@@ -1,0 +1,29 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Item implements Dummy {
+	private Long id;
+	private String name;
+	private String businessKey;
+	private Date start;
+	private Date end;
+	private String description;
+	private Double width;
+	private Double height;
+	private Boolean important;
+	private List<Part> parts = new ArrayList<Part>();
+	
+	@Override
+	public void fillDummyValues(RandomValues rnd) {
+		id = rnd.nextLong();
+		name = rnd.nextString(50);
+		businessKey = rnd.nextString(10);
+		start = rnd.nextDate();
+		end = rnd.nextDate();
+		description = rnd.nextString(500);
+		width = rnd.nextDouble();
+	}
+}

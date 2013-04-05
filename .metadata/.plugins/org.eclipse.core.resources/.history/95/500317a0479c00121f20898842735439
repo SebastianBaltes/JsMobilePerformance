@@ -1,0 +1,49 @@
+package de.objectcode.perftests.strings;
+
+import de.objectcode.perftests.utils.RandomValues;
+import de.objectcode.perftests.utils.ShowLogActivity;
+import de.objectcode.perftests.utils.StopWatch;
+
+public class StringActivity extends ShowLogActivity {
+	
+	RandomValues rnd;
+	String text;
+
+	@Override
+	public void perform() {
+		rnd = new RandomValues();
+		appendTest();
+		splitEs();
+		replaceRandomRegexpTest();
+	}
+	
+	private void splitEs() {
+		StopWatch w = new StopWatch();
+		log("split 'e'");
+		String[] parts = text.split("e");
+		log(w.stop());
+	}
+
+	private void replaceRandomRegexpTest() {
+		StopWatch w = new StopWatch();
+		log("compile, search and replace 1000 regexps");
+		String result = text;
+		for (int i = 0; i < 1000; i++) {
+			result = result.replaceAll("["+rnd.nextString(10).toLowerCase()+"]{1,2}[aeiou]+\\s+", rnd.nextString(10));
+		}
+		log(w.stop());
+	}
+
+	private void appendTest() {
+		StopWatch w = new StopWatch();
+		log("appending 10000 words into a String");
+		StringBuilder b = new StringBuilder();
+		for (int i = 0; i < 10000; i++) {
+			b.append(rnd.nextTextWord());
+			b.append(" ");
+		}
+		text = b.toString();
+		log(w.stop());
+	}
+
+}

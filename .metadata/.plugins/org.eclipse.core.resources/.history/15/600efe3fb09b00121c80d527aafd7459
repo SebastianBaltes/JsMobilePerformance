@@ -1,0 +1,12 @@
+package de.objectcode.perftests.lotofobjects;
+
+import de.objectcode.perftests.utils.ShowLogActivity;
+
+public class LotOfObjectsActivity extends ShowLogActivity {
+
+	@Override
+	public void perform() {
+		
+	}
+
+}

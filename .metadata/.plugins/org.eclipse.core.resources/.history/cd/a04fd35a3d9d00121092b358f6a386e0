@@ -1,0 +1,176 @@
+module('perftestsjs.tests').houghcircle = (function() {
+
+	function HoughCircleDetection(canvas,radius) {
+	
+		var imageValues;
+		var houghValues;
+		var sobelCoordsX;
+		var sobelCoordsY;
+		var sobelValues;
+		var soebelEdges;
+		var width;
+		var height;
+	
+		function Point(x,y) {
+			this.x=x;
+			this.y=y;
+		}
+	
+		this.markCircle = function(canvas,context,radius) {
+			width = canvas.width;
+			height = canvas.height;
+			var image = context.getImageData(0, 0, width, height);	        
+			var rgb = image.data;
+			setImage2DGrayArray(rgb);
+			fillSobelField();
+			var circles = findCircleWithRadius(radius);
+			context.lineWidth = 5;
+			context.strokeStyle = '#ff0000';
+			for (var i=0;i<circles.length;i++) {
+				var point = circles[i];
+				context.beginPath();
+				context.arc(point.x, point.y, radius, 0, Math.PI*2, true); 
+				context.closePath();
+				context.stroke();
+			}
+		}
+	
+		function createArr2d(width,height) {
+			var a = new Array(width);
+			for (var x = 0; x < width; x++) {
+				a[x] = new Array(height);
+			}
+			return a;
+		}
+	
+		function setImage2DGrayArray(rgb) {
+			imageValues = createArr2d(width,height);
+			for (var y = 0; y < height; y++) {
+				for (var x = 0; x < width; x++) {
+					var i = x + y * width;
+					var R = rgb[i * 4 + 0];
+					var G = rgb[i * 4 + 1];
+					var B = rgb[i * 4 + 2];
+					var gray = (R + G + B) / 3;
+					imageValues[x][y] = gray;
+				}
+			}
+		}
+	
+		function fillSobelField() {
+			var min = 1;
+			var maxW = width - min;
+			var maxH = height - min;
+			var maxSoebelSize = width * height;
+			sobelCoordsX = new Array(maxSoebelSize);
+			sobelCoordsY = new Array(maxSoebelSize);
+			sobelValues = new Array(maxSoebelSize);
+			soebelEdges = 0;
+			for (var y = min; y < maxH; y++) {
+				for (var x = min; x < maxW; x++) {
+					var soebel = directionLessSobelEdgeDetectionValue(x, y);
+					if (soebel != 0) {
+						sobelCoordsX[soebelEdges] = x;
+						sobelCoordsY[soebelEdges] = y;
+						sobelValues[soebelEdges] = soebel;
+						soebelEdges++;
+					}
+				}
+			}
+		}
+	
+		function findCircleWithRadius(radius) {
+			// define circle shape
+			var numCirclePoints = 0;
+			var numPts = Math.round(8 * radius);
+			var circleBorder = createArr2d(2,numPts);
+			for (var i = 0; i < numPts; i++) {
+				var theta = 6.283185307179586 * i / numPts;
+				var xx = Math.round(radius * Math.cos(theta));
+				var yy = Math.round(radius * Math.sin(theta));
+				if (numCirclePoints == 0
+						| (xx != circleBorder[0][numCirclePoints] & yy != circleBorder[1][numCirclePoints])) {
+					circleBorder[0][numCirclePoints] = xx;
+					circleBorder[1][numCirclePoints] = yy;
+					numCirclePoints++;
+				}
+			}
+	
+			// do huge transformation
+			houghValues = createArr2d(width,height);
+			for (var i = 0; i < soebelEdges; i++) {
+				var x = sobelCoordsX[i];
+				var y = sobelCoordsY[i];
+				var sobel = sobelValues[i];
+				for (var j = 0; j < numCirclePoints; j++) {
+					var xCoord = x + circleBorder[0][j];
+					var yCoord = y + circleBorder[1][j];
+					if (xCoord >= 0 & xCoord < width & yCoord >= 0
+							& yCoord < height) {
+						houghValues[xCoord][yCoord] += sobel;
+					}
+				}
+			}
+	
+			// get global huge maximum
+			var treshold = 0;
+			for (var y = 0; y < height; y++) {
+				for (var x = 0; x < width; x++) {
+					treshold = Math.max(treshold, houghValues[x][y]);
+				}
+			}
+			
+			// get circle centers
+			var circles = [];
+			for (var y = 0; y < height; y++) {
+				for (var x = 0; x < width; x++) {
+					if (houghValues[x][y] >= treshold) {
+						circles.push(new Point(x, y));
+					}
+				}
+			}
+			return circles;
+		}
+	
+		function directionLessSobelEdgeDetectionValue(xPos,yPos) {
+			var sobelSum = 0.0;
+			var d = createArr2d(3,3);
+			for (var y = 0; y < 3; y++) {
+				for (var x = 0; x < 3; x++) {
+					d[x][y] = (imageValues[xPos + x - 1][yPos + y - 1]);
+				}
+			}
+			var sobelH = (d[0][2] + (2 * d[1][2]) + d[2][2]
+					- d[0][0] - (2 * d[1][0]) - d[2][0]);
+			var sobelV = (d[2][0] + (2 * d[2][1]) + d[2][2]
+					- d[0][0] - (2 * d[0][1]) - d[0][2]);
+			sobelSum = (Math.abs(sobelH) + Math.abs(sobelV)) / 2;
+			return sobelSum;
+		}
+	
+	}
+
+	function startFN() {
+		var img = new Image();
+		img.src = 'images/balls.jpg'; 
+		img.onload = function(){
+			var canvas = $('#HoughCirclePage #canvas').get()[0];
+			var context = canvas.getContext('2d');
+		    context.drawImage(img, 0, 0);
+	        var w = new StopWatch();
+			var hough = new HoughCircleDetection();
+	        hough.markCircle(canvas,context,39);
+	        log(w.stop());
+		};		
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "HoughCircle"
+	}
+
+})();

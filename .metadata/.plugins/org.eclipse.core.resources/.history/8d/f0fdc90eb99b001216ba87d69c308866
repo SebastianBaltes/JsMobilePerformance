@@ -1,0 +1,18 @@
+package de.objectcode.perftests.strings;
+
+import de.objectcode.perftests.utils.RandomValues;
+import de.objectcode.perftests.utils.ShowLogActivity;
+
+public class StringActivity extends ShowLogActivity {
+	String[] words = new String[] {
+			
+	};
+	@Override
+	public void perform() {
+		RandomValues rnd = new RandomValues();
+		StringBuilder b = new StringBuilder();
+		for (int i = 0; i < 10000; i++) {
+			b.append(rnd.nextTextWord());
+		}
+	}
+}

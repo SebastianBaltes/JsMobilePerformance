@@ -1,0 +1,14 @@
+package de.objectcode.perftests.lotofobjects;
+
+import de.objectcode.perftests.utils.ShowLogActivity;
+
+public class LotOfObjectsActivity extends ShowLogActivity {
+
+	@Override
+	public void perform() {
+		long t0 = System.currentTimeMillis();
+		Shop shop = new Shop();
+		
+	}
+
+}

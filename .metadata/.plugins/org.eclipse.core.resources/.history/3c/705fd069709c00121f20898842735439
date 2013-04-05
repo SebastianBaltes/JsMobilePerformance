@@ -1,0 +1,19 @@
+package de.objectcode.perftests.json;
+
+import de.objectcode.perftests.utils.RandomValues;
+import de.objectcode.perftests.utils.ShowLogActivity;
+import de.objectcode.perftests.utils.StopWatch;
+
+public class JsonRequestActivity extends ShowLogActivity {
+	
+	RandomValues rnd;
+
+	@Override
+	public void perform() {
+		rnd = new RandomValues();
+		StopWatch w = new StopWatch();
+		log("split 'e'");
+		log(w.stop());
+	}
+	
+}

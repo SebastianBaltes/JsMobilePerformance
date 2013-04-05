@@ -1,0 +1,257 @@
+module('perftestsjs.tests').mandelbrot = (function() {
+
+	function Point(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	function Complex(r, i) {
+		this.r = r;
+		this.i = i;
+	}
+	Complex.prototype.abs = function(o) {
+		return Math.sqrt(this.r * this.r + this.i * this.i);
+	};
+	Complex.prototype.angle = function(o) {
+		return Math.atan2(this.i, this.r);
+	};
+
+	function MandelbrotCalculator(width, height) {
+
+		this.fractalPixels = null;
+		this.zr = null;
+		this.zi = null;
+		this.iterationPixels = null;
+		this.iteration = 0;
+		this.o = new Complex(2, 2);
+		this.d = new Complex(4, 4);
+
+		this.calculateOneIteration = function() {
+			var cr = 0.0;
+			var ci = 0.0;
+			var ab = 0.0;
+			var z1r = 0.0;
+			var z1i = 0.0;
+			var zr2 = 0.0;
+			var zi2 = 0.0;
+			var boundary = 1e4;
+			this.iteration = this.iteration + 1;
+			for ( var x = 0; x < this.width; x++) {
+				for ( var y = 0; y < this.height; y++) {
+					var i = x + y * this.width;
+					cr = x * this.d.r / this.width - this.o.r;
+					ci = this.o.i - y * this.d.i / this.height;
+					zr2 = this.zr[i] * this.zr[i];
+					zi2 = this.zi[i] * this.zi[i];
+					ab = zr2 + zi2;
+					if (ab < boundary) {
+						z1r = zr2 - zi2 + cr;
+						z1i = 2 * this.zr[i] * this.zi[i] + ci;
+						this.zr[i] = z1r;
+						this.zi[i] = z1i;
+					} else {
+						if (this.iterationPixels[i] == 0) {
+							this.iterationPixels[i] = this.iteration;
+						}
+					}
+				}
+			}
+			for ( var x = 0; x < this.width; x++) {
+				for ( var y = 0; y < this.height; y++) {
+					var i = x + y * this.width;
+					if (this.iterationPixels[i] == 0) {
+						var c = new Complex(this.zr[i], this.zi[i]);
+						var f = Math.abs(Math.sin(1 / ((Math.PI + 0.7) * c
+								.abs())));
+						this.fractalPixels[i] = this.Hsb2Rgb(c.angle(), 1, f);
+					} else {
+						var f = this.iterationPixels[i] / this.iteration;
+						this.fractalPixels[i] = this.Hsb2Rgb(0, 1, f);
+					}
+					;
+				}
+				;
+			}
+			;
+		};
+
+		this.resize = function(width, height) {
+			function arrayWithZeros(size) {
+				var a = new Array(size);
+				for ( var i = 0; i < a.length; i++) {
+					a[i] = 0.0;
+				}
+				return a;
+			}
+			this.width = width;
+			this.height = height;
+			var size = this.width * this.height;
+			this.fractalPixels = arrayWithZeros(size);
+			this.zr = arrayWithZeros(size);
+			this.zi = arrayWithZeros(size);
+			this.iterationPixels = arrayWithZeros(size);
+		};
+
+		this.zoom = function(point, zoomFactor) {
+			var center = this.toGraphCoord(point);
+			this.d = new Complex(this.d.r / zoomFactor, this.d.i / zoomFactor);
+			this.o = new Complex(-center.r + this.d.r / 2, center.i + this.d.i
+					/ 2);
+			for ( var x = 0; x < this.width; x++) {
+				for ( var y = 0; y < this.height; y++) {
+					var i = x + y * this.width;
+					this.zr[i] = x * this.d.r / this.width - this.o.r;
+					this.zi[i] = this.o.i - y * this.d.i / this.height;
+					this.iterationPixels[i] = 0;
+				}
+				;
+			}
+			this.iteration = 0;
+		};
+
+		this.rgbToInt = function(r, g, b) {
+			return ((255 & 0xFF) << 24) | ((r & 0xFF) << 16)
+					| ((g & 0xFF) << 8) | ((b & 0xFF) << 0);
+		};
+
+		this.toGraphCoord = function(point) {
+			return new Complex(point.x * this.d.r / this.width - this.o.r,
+					this.o.i - point.y * this.d.i / this.height);
+		};
+
+		this.Hsb2Rgb = function(hue, saturation, brightness) {
+			var r = 0, g = 0, b = 0;
+			if (saturation == 0) {
+				r = g = b = brightness * 255.0 + 0.5;
+			} else {
+				var h = (hue - Math.floor(hue)) * 6.0;
+				var f = h - Math.floor(h);
+				var p = brightness * (1.0 - saturation);
+				var q = brightness * (1.0 - saturation * f);
+				var t = brightness * (1.0 - (saturation * (1.0 - f)));
+				switch (Math.floor(h)) {
+				case 0:
+					r = (brightness * 255.0 + 0.5);
+					g = (t * 255.0 + 0.5);
+					b = (p * 255.0 + 0.5);
+					break;
+				case 1:
+					r = (q * 255.0 + 0.5);
+					g = (brightness * 255.0 + 0.5);
+					b = (p * 255.0 + 0.5);
+					break;
+				case 2:
+					r = (p * 255.0 + 0.5);
+					g = (brightness * 255.0 + 0.5);
+					b = (t * 255.0 + 0.5);
+					break;
+				case 3:
+					r = (p * 255.0 + 0.5);
+					g = (q * 255.0 + 0.5);
+					b = (brightness * 255.0 + 0.5);
+					break;
+				case 4:
+					r = (t * 255.0 + 0.5);
+					g = (p * 255.0 + 0.5);
+					b = (brightness * 255.0 + 0.5);
+					break;
+				case 5:
+					r = (brightness * 255.0 + 0.5);
+					g = (p * 255.0 + 0.5);
+					b = (q * 255.0 + 0.5);
+					break;
+				}
+			}
+			return 0xff000000 | (Math.floor(r) << 16) | (Math.floor(g) << 8)
+					| (Math.floor(b) << 0);
+		};
+
+		this.resize(width, height);
+	}
+
+	var stop = false;
+
+	function start() {
+		stop = false
+		var now = 0;
+		var framesCount = 0;
+		var framesCountAvg = 0;
+		var framesTimer = 0;
+
+		var mandelbrotSide = 100;
+
+		var framesPerSecond = $('#MandelbrotPage>#framesPerSecond');
+
+		var canvas = $('#MandelbrotPage>#canvas').get()[0];
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		var context = canvas.getContext('2d');
+
+		var image = context.createImageData(mandelbrotSide, mandelbrotSide);
+		var imageData = image.data;
+		var mandelbrot = new MandelbrotCalculator(mandelbrotSide,
+				mandelbrotSide);
+
+		var unscaledCanvas = $("<canvas>").attr("width", image.width).attr(
+				"height", image.height)[0];
+		var unscaledContext = unscaledCanvas.getContext("2d");
+
+		function oneFrame() {
+			mandelbrot.calculateOneIteration();
+			var fractalPixels = mandelbrot.fractalPixels;
+			var length = fractalPixels.length;
+			for ( var i = 0; i < length; i++) {
+				var c = fractalPixels[i];
+				imageData[i * 4 + 0] = (c >> 16) & 0xFF;
+				imageData[i * 4 + 1] = (c >> 8) & 0xFF;
+				imageData[i * 4 + 2] = (c >> 0) & 0xFF;
+				imageData[i * 4 + 3] = (c >> 24) & 0xFF;
+			}
+			;
+
+			unscaledContext.putImageData(image, 0, 0);
+			context
+					.drawImage(unscaledCanvas, 0, 0, canvas.width,
+							canvas.height);
+
+			now = new Date().getTime();
+
+			framesPerSecond.text(framesCountAvg + " fps");
+			framesCount++;
+			if (now - framesTimer > 1000) {
+				framesTimer = now;
+				framesCountAvg = framesCount;
+				framesCount = 0;
+			}
+			if (!stop) {
+				window.setTimeout(oneFrame, 1);
+			}
+		}
+		oneFrame();
+
+		$('#MandelbrotPage>#canvas').click(
+				function(e) {
+					var x = (e.pageX - $(this).position().left)
+							/ $(this).width() * mandelbrotSide;
+					var y = (e.pageY - $(this).position().top)
+							/ $(this).height() * mandelbrotSide;
+					mandelbrot.zoom(new Point(x, y), 4.0);
+				});
+
+		$(window).resize(function() {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+		});
+	}
+
+	function stop() {
+		stop = true;
+	}
+
+	return {
+		start : start,
+		stop : stop,
+		name : "Mandelbrot"
+	}
+
+})();

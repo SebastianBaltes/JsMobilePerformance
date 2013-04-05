@@ -1,0 +1,114 @@
+package de.objectcode.perftests.json;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import org.apache.http.Header;
+import org.apache.http.HeaderElement;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpException;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpResponseInterceptor;
+import org.apache.http.StatusLine;
+import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
+import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+
+import android.os.AsyncTask;
+import android.util.Log;
+
+public class AsyncJsonRequest {
+
+  private AtomicBoolean aborted = new AtomicBoolean();
+  private JsonCallback callback;
+  private HttpEntityEnclosingRequestBase request;
+
+  public AsyncJsonRequest(HttpEntityEnclosingRequestBase request, JsonCallback callback) {
+    try {
+      Log.d(
+          App.LOGTAG,
+          "AsyncJsonRequest uri='" + request.getURI().toString() + "', content='"
+              + EntityUtils.toString(request.getEntity()) + "'");
+    } catch (Exception e) {
+      // f*cking checked exceptions
+    }
+    AsyncJsonRequestIntern task = new AsyncJsonRequestIntern();
+    this.callback = callback;
+    this.request = request;
+    task.execute();
+  }
+
+  public class AsyncJsonRequestIntern extends AsyncTask<HttpRequestBase, Void, Object> {
+
+    @Override
+    protected Object doInBackground(HttpRequestBase... arg) {
+      DefaultHttpClient httpClient = new DefaultHttpClient();
+      httpClient.addResponseInterceptor(new HttpResponseInterceptor() {
+        @Override
+        public void process(final HttpResponse response, final HttpContext context) throws HttpException, IOException {
+          HttpEntity entity = response.getEntity();
+          if (entity != null) {
+            Header ceheader = entity.getContentEncoding();
+            if (ceheader != null) {
+              HeaderElement[] codecs = ceheader.getElements();
+              for (int i = 0; i < codecs.length; i++) {
+                if (codecs[i].getName().equalsIgnoreCase("gzip")) {
+                  response.setEntity(new GzipDecompressingEntity(response.getEntity()));
+                  return;
+                }
+              }
+            }
+          }
+        }
+
+      });
+      try {
+        StringBuilder builder = new StringBuilder();
+        HttpResponse response = httpClient.execute(request);
+        StatusLine statusLine = response.getStatusLine();
+        int statusCode = statusLine.getStatusCode();
+        Log.d(App.LOGTAG, statusLine.toString());
+        if (statusCode == 200) {
+          HttpEntity entity = response.getEntity();
+          InputStream content = entity.getContent();
+          BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+          String line;
+          while ((line = reader.readLine()) != null) {
+            builder.append(line);
+          }
+          Log.d(App.LOGTAG, builder.toString());
+          return new JSONObject(builder.toString());
+        } else {
+          return statusLine;
+        }
+      } catch (Exception e) {
+        return e;
+      }
+    }
+
+    @Override
+    protected void onPostExecute(Object result) {
+      if (aborted.get()) {
+        callback.onAbort();
+      } else if (result instanceof JSONObject) {
+        callback.onSuccess((JSONObject) result);
+      } else if (result instanceof StatusLine) {
+        StatusLine statusLine = (StatusLine) result;
+        callback.onStatusNotOk(statusLine.getStatusCode(), statusLine.getReasonPhrase());
+      } else if (result instanceof Exception) {
+        callback.onException((Exception) result);
+      }
+    }
+  }
+
+  public void abort() {
+    aborted.set(true);
+    request.abort();
+  }
+
+}

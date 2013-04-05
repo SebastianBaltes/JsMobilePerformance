@@ -1,0 +1,17 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.Date;
+
+public class User implements Dummy {
+	private Long id;
+	private String name;
+	private String email;
+	private Date birthday;
+	private Address address;
+	@Override
+	public void fillDummyValues(RandomValues rnd) {
+		id = rnd.nextLong();
+		name = rnd.nextString(40);
+		
+	}
+}

@@ -1,0 +1,108 @@
+package de.objectcode.mandelbrot
+
+import de.objectcode.perftests.ColorUtils;
+import de.objectcode.perftests.Complex;
+import scala.Int
+import android.graphics.Color
+import android.graphics.Point
+
+case class Complex(r : Double, i : Double) {
+  def +(o: Complex) = new Complex(r + o.r, i + o.i)
+  def -(o: Complex) = new Complex(r - o.r, i - o.i)
+  def *(o: Complex) = new Complex(r * o.r - i * o.i, r * o.i + i * o.r)
+  def abs =  Math.sqrt(r*r + i*i)
+  def angle = Math.atan2(i,r)  
+}
+
+class MandelbrotCalculator(var width: Int, var height: Int) {
+ 
+  var fractalPixels: Array[Int] = null  
+  var z: Array[Complex] = null
+  var zr: Array[Double] = null
+  var zi: Array[Double] = null
+  var iterationPixels: Array[Int] = null
+  var iteration: Int = 0
+  var o: Complex = new Complex(2,2)
+  var d: Complex = new Complex(4,4)
+
+  resize(width,height)
+  
+  def calculateOneIteration {
+    var cr = 0.0
+    var ci = 0.0 
+    var ab = 0.0
+    var z1r = 0.0
+    var z1i = 0.0
+    var zr2 = 0.0
+    var zi2  = 0.0
+    var boundary = 1e4
+    iteration=iteration+1
+    for (x <- 0 to width-1) {
+      for (y <- 0 to height-1) {
+        val i = x+y*width
+        cr=x*d.r/width-o.r
+        ci=o.i-y*d.i/height
+        zr2=zr(i)*zr(i)
+        zi2=zi(i)*zi(i)
+        ab=zr2+zi2
+        if (ab<boundary) {
+          z1r=zr2-zi2+cr
+          z1i=2*zr(i)*zi(i)+ci
+          zr(i)=z1r
+          zi(i)=z1i
+        } else {
+          if (iterationPixels(i)==0) {
+            iterationPixels(i)=iteration
+          }
+        }
+      }
+    }
+    for (x <- 0 to width-1) {
+      for (y <- 0 to height-1) {
+        val i = x+y*width
+        if (iterationPixels(i)==0) {
+          val c = new Complex(zr(i),zi(i))
+          fractalPixels(i)=Hsb2Rgb(c.angle,1,Math.abs(Math.sin(1/((Math.PI+0.7F)*c.abs))))
+        } else {
+          val f = iterationPixels(i).toDouble/iteration.toDouble
+          fractalPixels(i)=Hsb2Rgb(0F,1F,f.toFloat)
+        }
+      }
+    }
+  }
+
+  def resize(pWidth: Int, pHeight: Int) {
+    width = pWidth
+    height = pHeight
+    val size = width * height
+    fractalPixels = new Array[Int](size)    
+    zr = new Array[Double](size)
+    zi = new Array[Double](size)
+    iterationPixels = new Array[Int](size)        
+  }
+  
+  def zoom(point: Point, zoomFactor: Double) {
+    zoom(toGraphCoord(point),zoomFactor)
+  }
+
+  def zoom(center: Complex, zoomFactor: Double) {
+    d=new Complex(d.r/zoomFactor,d.i/zoomFactor)
+    o=new Complex(-center.r+d.r/2,center.i+d.i/2)
+    for (x <- 0 to width-1) {
+      for (y <- 0 to height-1) {
+         val i = x+y*width
+         zr(i)=x*d.r/width-o.r
+         zi(i)=o.i-y*d.i/height
+         iterationPixels(i)=0
+      }
+    }
+    iteration=0
+  }
+
+  
+  def rgbToInt(r: Int, g: Int, b: Int) = ((255 & 0xFF) << 24) | ((r & 0xFF) << 16) | ((g & 0xFF) << 8) | ((b & 0xFF) << 0)
+
+  def toGraphCoord(point: Point) = new Complex(point.x*d.r/width-o.r,o.i-point.y*d.i/height)
+  
+  def Hsb2Rgb(H: Double, S: Double, B: Double) = ColorUtils.HSBtoRGB(H, S, B) 
+}

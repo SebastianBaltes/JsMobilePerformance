@@ -1,0 +1,53 @@
+package controllers;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.node.ArrayNode;
+import org.codehaus.jackson.node.ObjectNode;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import play.libs.Json;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.index;
+
+public class Application extends Controller {
+  
+	public static class ResultObject {
+		String id;
+		String name;
+		String description;
+		Boolean flag;
+		Double real;
+		Map<String, String> properties = new HashMap<String, String>();
+		List<Long> values = new ArrayList<Long>();
+	}
+
+	
+    public static Result index(long seed) {
+    	RandomValues rnd = new RandomValues((int)seed);
+    	List<ResultObject> result = new ArrayList<>();
+    	while (result.size()<100) {
+    		ResultObject o = new ResultObject();
+    		o.id = rnd.nextString(10);
+    		o.name = rnd.nextString(30);
+    		o.description = rnd.nextString(255);
+    		o.flag = rnd.nextBoolean();
+    		o.real = rnd.nextDouble();
+    		while (o.properties.size()<10) {
+    			o.properties.put(rnd.nextTextWord(), rnd.nextTextWord());
+    		}
+    		while (o.values.size()<20) {
+    			o.values.add(rnd.nextLong());
+    		}
+    		result.add(o);
+    	}
+    	return ok(Json.toJson(result));
+    }
+  
+}

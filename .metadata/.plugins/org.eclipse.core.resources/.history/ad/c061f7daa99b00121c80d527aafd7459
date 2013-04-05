@@ -1,0 +1,7 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.Map;
+
+public class Warehouse {
+	private Map<String,Item> items = new HashMap<>();
+}

@@ -1,0 +1,58 @@
+var logElement = $('#log');
+
+var allLogs = "";
+
+function log(s) {
+	console.log(s);
+	logElement.html(logElement.html()+s+"<br/>");
+	allLogs += s + "\n";
+}
+
+function sendMail() {
+	var subject = "Performance Test: android/java/"+android.os.Build.MODEL;
+	
+	var text = "";
+	text+="plattform: "+device.platform+"\n";
+	text+="language: javascript\n";
+	text+="os version: "+device.version+"\n";
+	text+="model: "+device.name+"\n";
+	text+="\n";
+	text+=allLogs;
+	
+	var email = "mailto:baltes@objectcode.de";
+	
+	window.plugins.emailComposer.showEmailComposerWithCallback(null,subject,text,[email],[],[],false,[]);
+}
+
+
+$(function(){
+	$("div[data-role='page']").live('pageshow',function(event, ui){
+		function getModule(page) {
+			var nullModule = {start:function(){},stop:function(){},name:'Undefined'};
+			var moduleName = page.attr('data-testmodule');
+			if (typeof moduleName==='undefined') {
+				return nullModule;
+			}
+			var module = eval(moduleName);
+			if (typeof module==='undefined') {
+				return nullModule;
+			}
+			return module;
+		}
+		var prevModule = getModule(ui.prevPage);
+		var newModule = getModule($(this));
+		console.log("page transition "+prevModule.name+" -> "+newModule.name);
+		prevModule.stop();
+		$.mobile.showPageLoadingMsg("a", newModule.name);			
+		logElement = $('#log',$(this));
+		logElement.empty();
+		setTimeout(function(){
+			newModule.start();
+			$.mobile.hidePageLoadingMsg();
+		},1);
+	});
+	$('#SendMail').click(function() {
+		sendMail();
+	});
+});
+

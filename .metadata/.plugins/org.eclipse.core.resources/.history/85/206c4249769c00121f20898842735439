@@ -1,0 +1,46 @@
+package controllers;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.node.ArrayNode;
+import org.codehaus.jackson.node.ObjectNode;
+
+import android.graphics.Point;
+
+import play.libs.Json;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.index;
+
+public class Application extends Controller {
+  
+	public static class ResultObject {
+		String id;
+		String name;
+		String description;
+		Boolean flag;
+		Double real;
+		Map<String, String> properties = new HashMap<String, String>();
+		List<Point> points = new ArrayList<Point>();
+	}
+	
+	
+    public static Result index(long seed) {
+    	RandomValues values = new RandomValues((int)seed);
+    	ObjectNode result = Json.newObject();
+    	  if(name == null) {
+    	    result.put("status", "KO");
+    	    result.put("message", "Missing parameter [name]");
+    	    return badRequest(result);
+    	  } else {
+    	    result.put("status", "OK");
+    	    result.put("message", "Hello " + name);
+    	    return ok(result);
+    	  }    	
+        return ok(index.render("Your new application is ready."));
+    }
+  
+}

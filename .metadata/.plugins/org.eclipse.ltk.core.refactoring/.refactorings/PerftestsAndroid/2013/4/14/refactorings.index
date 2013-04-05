@@ -1,0 +1,60 @@
+1364914622418	Rename type 'MainActivity'
+1364914662264	Rename package 'de.objectcode.mandelbrot'
+1364914802568	Move elements
+1364914844204	Rename type 'MyListActivity'
+1364914879986	Rename field 'values'
+1364915018721	Delete element
+1364915378474	Move compilation unit
+1364915472461	Rename package 'de.objectcode.lotofobjects'
+1364917196904	Rename type 'Warehouse'
+1364918483040	Move compilation unit
+1364918589529	Rename local variable 'item'
+1364919238566	Rename type 'Measurement'
+1364919242959	Rename type 'M'
+1364919351017	Rename method 'end'
+1364919936551	Rename field 'heap'
+1364983509719	Extract method 'appendTest'
+1364984126333	Rename method 'searchTest'
+1364985453462	Move compilation unit
+1364985462171	Delete element
+1364987373575	Copy compilation unit
+1364987385864	Rename type 'MandelbrotActivity'
+1364987527786	Rename field 'v'
+1364987619858	Move package
+1364987631823	Rename resource '595px-Baoding_Balls_Qi_Gong_Kugeln01.jpg'
+1364988201317	Rename method 'transform'
+1364989204035	Rename method 'markCircles'
+1364990303492	Rename type 'binarytrees'
+1364990320707	Move compilation unit
+1364990327737	Copy compilation unit
+1364990341911	Rename type 'LotOfObjectsActivity'
+1364990914957	Delete element
+1364990920243	Move compilation unit
+1364990924389	Delete element
+1364991992192	Rename package 'de.objectcode.perftests.sqlthroughput'
+1364995917909	Delete element
+1364996943270	Rename local variable 'array'
+1364998573319	Move compilation unit
+1364998579220	Delete element
+1365001374721	Move compilation unit
+1365001457840	Delete element
+1365002555152	Rename local variable 'points'
+1365003865120	Copy compilation unit
+1365004078949	Rename local variable 'pointArray'
+1365004669517	Delete elements
+1365004673465	Delete element
+1365004677988	Move compilation unit
+1365004682221	Delete element
+1365005221735	Rename package 'de.objectcode.perftests.lotofobjects'
+1365005237300	Rename type 'LotOfObjectsActivity'
+1365006144660	Move folder
+1365006156413	Delete element
+1365067762420	Rename local variable 'radius'
+1365081510671	Rename local variable 'c'
+1365085928911	Copy file
+1365096150155	Copy files
+1365100492164	Extract method 'checksum'
+1365153284300	Extract method 'next'
+1365154161881	Rename method 'next'
+1365154166021	Rename method 'next'
+1365154173960	Rename method 'next'

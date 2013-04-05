@@ -1,0 +1,16 @@
+package de.objectcode.perftests.sql;
+
+import de.objectcode.perftests.utils.ShowLogActivity;
+import de.objectcode.perftests.utils.StopWatch;
+
+public class SqlActivity extends ShowLogActivity {
+
+	@Override
+	public void perform() {
+		log("initialize database and perform some sql queries");
+		StopWatch w = new StopWatch();
+		
+		log(w.stop());
+	}
+
+}

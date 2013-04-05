@@ -1,0 +1,29 @@
+module('perftestsjs.tests').manyobjects = (function() {
+
+	function Address(rnd) {
+		this.line = [rnd.nextString(60),rnd.nextString(60),rnd.nextString(60)];
+		this.city = rnd.nextString(10);
+		this.plz = rnd.nextString(5);
+		this.country = rnd.nextString(10);
+	}
+
+	function Address(rnd) {
+		this.line = [rnd.nextString(60),rnd.nextString(60),rnd.nextString(60)];
+		this.city = rnd.nextString(10);
+		this.plz = rnd.nextString(5);
+		this.country = rnd.nextString(10);
+	}
+	
+	function startFN() {
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "ManyObjects"
+	}
+
+})();

@@ -1,0 +1,13 @@
+package de.objectcode.perftests.utils;
+
+public class PerfLog {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

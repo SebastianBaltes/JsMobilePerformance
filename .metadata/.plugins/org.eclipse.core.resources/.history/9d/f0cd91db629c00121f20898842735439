@@ -1,0 +1,24 @@
+package de.objectcode.perftests.sql;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class MySQLiteHelper extends SQLiteOpenHelper {
+
+  public MySQLiteHelper(Context context) {
+    super(context, "demo_table", null, 1);
+  }
+
+  @Override
+  public void onCreate(SQLiteDatabase database) {
+    database.execSQL( "create table demo_table ( id integer primary key, name text, description text, peak double, created date)");
+  }
+
+  @Override
+  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    db.execSQL("drop table if exists demo_table;");
+    onCreate(db);
+  }
+
+} 

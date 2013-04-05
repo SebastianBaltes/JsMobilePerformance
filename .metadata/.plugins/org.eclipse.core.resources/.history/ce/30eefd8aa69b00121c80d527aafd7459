@@ -1,0 +1,16 @@
+package de.objectcode.perftests.mandelbrot;
+
+import de.objectcode.mandelbrot.R;
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+public class MandelbrotActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(new MandelbrotView(this));
+    }
+
+}

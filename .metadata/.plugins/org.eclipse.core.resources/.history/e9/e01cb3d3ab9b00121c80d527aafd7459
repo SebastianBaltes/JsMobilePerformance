@@ -1,0 +1,17 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Item {
+	private Long id;
+	private String name;
+	private String businessKey;
+	private Date start;
+	private Date end;
+	private String description;
+	private Double width;
+	private Double height;
+	private List<Part> parts = new ArrayList<Part>();
+}

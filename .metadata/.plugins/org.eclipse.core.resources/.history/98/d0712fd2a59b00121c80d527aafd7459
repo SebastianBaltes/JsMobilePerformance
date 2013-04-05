@@ -1,0 +1,154 @@
+package de.objectcode.perftests;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.Point;
+import android.view.MotionEvent;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+
+public class MandelbrotView extends SurfaceView implements SurfaceHolder.Callback {
+
+  GameThread thread;
+  MandelbrotCalculator mandelbrot = new MandelbrotCalculator(100, 100);
+
+  // Measure frames per second.
+  long now;
+  int framesCount = 0;
+  int framesCountAvg = 0;
+  long framesTimer = 0;
+
+  // Frame speed
+  long timeNow;
+  long timePrev = 0;
+  long timePrevFrame = 0;
+  long timeDelta;
+  
+  Paint fpsPaint=new Paint();
+
+  public MandelbrotView(Context context) {
+    super(context);
+    fpsPaint.setTextSize(30);
+    fpsPaint.setColor(Color.WHITE);
+    getHolder().addCallback(this);
+    setFocusable(true);    
+  }
+
+  @Override
+  protected void onDraw(Canvas canvas) {
+    super.onDraw(canvas);
+    
+    Matrix matrix = new Matrix();
+    matrix.postScale(scaleX(),scaleY());
+    Bitmap.Config config = Bitmap.Config.ARGB_8888;
+    Bitmap bitmap = Bitmap.createBitmap(mandelbrot.fractalPixels(), mandelbrot.width(), mandelbrot.height(), config);
+    canvas.drawBitmap(bitmap,matrix,null);
+    
+    now=System.currentTimeMillis();
+    canvas.drawText(framesCountAvg+" fps", 40, 70, fpsPaint);
+    framesCount++;
+    if(now-framesTimer>1000) {
+            framesTimer=now;
+            framesCountAvg=framesCount;
+            framesCount=0;
+    }
+  }
+
+  private float scaleY() {
+    return this.getHeight()/(float)mandelbrot.height();
+  }
+
+  private float scaleX() {
+    return this.getWidth()/(float)mandelbrot.width();
+  }
+
+  @Override
+  public synchronized boolean onTouchEvent(MotionEvent ev) {
+    switch (ev.getAction()) {
+    case MotionEvent.ACTION_DOWN: {
+      mandelbrot.zoom(new Point((int) (ev.getX()/scaleX()), (int) (ev.getY()/scaleY())), 4.0);
+      break;
+    }
+    }
+    return true;
+  }
+
+  @Override
+  public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+  }
+
+  @Override
+  public void surfaceCreated(SurfaceHolder holder) {
+    thread = new GameThread(getHolder());
+    thread.start();
+  }
+
+  @Override
+  public void surfaceDestroyed(SurfaceHolder holder) {
+    boolean retry = true;
+    thread.setRunning(false);
+    while (retry) {
+      try {
+        thread.join();
+        retry = false;
+      } catch (InterruptedException e) {
+      }
+    }
+  }
+
+  @SuppressLint("WrongCall")
+class GameThread extends Thread {
+    private SurfaceHolder surfaceHolder;
+    private boolean run = true;
+
+    public GameThread(SurfaceHolder surfaceHolder) {
+      this.surfaceHolder = surfaceHolder;
+    }
+
+    public void setRunning(boolean run) {
+      this.run = run;
+    }
+
+    public SurfaceHolder getSurfaceHolder() {
+      return surfaceHolder;
+    }
+
+    @Override
+    public void run() {
+      Canvas canvas;
+      while (run) {
+        canvas = null;
+        // limit frame rate to max 60fps
+        timeNow = System.currentTimeMillis();
+        timeDelta = timeNow - timePrevFrame;
+        if (timeDelta < 16) {
+          try {
+            Thread.sleep(16 - timeDelta);
+          } catch (InterruptedException e) {
+
+          }
+        }
+        timePrevFrame = System.currentTimeMillis();
+
+        try {
+          canvas = surfaceHolder.lockCanvas(null);
+          synchronized (surfaceHolder) {
+            mandelbrot.calculateOneIteration();
+            onDraw(canvas);
+          }
+        } catch (Exception e) {
+          e.printStackTrace();
+        } finally {
+          if (canvas != null) {
+            surfaceHolder.unlockCanvasAndPost(canvas);
+          }
+        }
+      }
+    }
+  }
+}

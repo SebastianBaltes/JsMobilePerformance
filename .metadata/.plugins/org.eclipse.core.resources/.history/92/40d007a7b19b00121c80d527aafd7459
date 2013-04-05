@@ -1,0 +1,31 @@
+package de.objectcode.perftests.utils;
+
+public class StopWatch {
+	
+	private Measurement m0;
+	private Measurement m1;
+	
+	class Measurement {
+		long t;
+		long heap;
+		public Measurement() {
+			t = System.currentTimeMillis();
+			heap = System.nanoTime();
+		}
+		public String diff(Measurement o) {
+			StringBuilder b = new StringBuilder();
+			b.append("time: ").append(t-o.t).append(" ns\n");
+			b.append("heap: ").append(heap-o.heap).append(" bytes\n");
+			return b.toString();
+		}
+	}
+	
+	public StopWatch() {
+		m0 = new Measurement();
+	}
+	
+	public String stop() {
+		m1 = new Measurement();
+		return m1.diff(m0);
+	}
+}

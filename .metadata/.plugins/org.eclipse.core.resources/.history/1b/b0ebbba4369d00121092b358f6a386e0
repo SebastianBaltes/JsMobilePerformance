@@ -1,0 +1,47 @@
+module('perftestsjs.tests').houghcircle = (function() {
+
+	var canvas;
+	var context;
+
+	function startFN() {
+		canvas = $('#HoughCirclePage #canvas').get()[0];
+		context = canvas.getContext('2d');
+		
+		var img = new Image();
+		img.src = 'images/balls.jpg'; 
+		
+		img.onload = function(){
+		    context.drawImage(img, 0, 0);
+	        var w = new StopWatch();
+			var image = context.createImageData(canvas.width, canvas.height);
+			var imageData = image.data;
+
+			for ( var i = 0; i < imageData.length; i++) {
+				var c = 0;
+				imageData[i * 4 + 0] = (c >> 16) & 0xFF;
+				imageData[i * 4 + 1] = (c >> 8) & 0xFF;
+				imageData[i * 4 + 2] = (c >> 0) & 0xFF;
+				imageData[i * 4 + 3] = (c >> 24) & 0xFF;
+			}
+			
+		    context.drawImage(image, 0, 0);
+			//context.putImageData(image, 0, 0);
+			
+	        log(w.stop());
+	        
+		    
+//			var image = context.createImageData(mandelbrotSide, mandelbrotSide);
+//			var imageData = image.data;
+		};		
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "HoughCircle"
+	}
+
+})();

@@ -1,0 +1,24 @@
+module('perftestsjs.tests').strings = (function() {
+
+	var rnd;
+		
+    // TODO change this to the url of your test server (see JsonDummyServer)
+	var url = "http://172.22.2.50:9000";
+	
+	function startFN() {
+		rnd = new RandomValues();
+		appendTest();
+		splitEs();
+		replaceRandomRegexpTest();
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "Strings"
+	}
+
+})();

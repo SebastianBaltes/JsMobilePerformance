@@ -1,0 +1,18 @@
+package de.objectcode.perftests.lotofobjects;
+
+import de.objectcode.perftests.mandelbrot.MandelbrotView;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class LotOfObjectsActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        TextView v = new TextView(this);
+        v.setText("Hello \n World");
+        setContentView(v);
+    }
+
+}

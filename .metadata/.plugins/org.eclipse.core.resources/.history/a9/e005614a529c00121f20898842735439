@@ -1,0 +1,35 @@
+package de.objectcode.perftests.houghcircle;
+
+import de.objectcode.perftests.R;
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class HoughCircleActivity extends Activity {
+
+	TextView text;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        text = new TextView(this);
+        LinearLayout linear = new LinearLayout(this);
+        linear.addView(text);
+        ImageView imageView = new ImageView(this);
+        linear.addView(imageView);
+        Bitmap image = BitmapFactory.decodeResource(this.getResources(), R.drawable.balls);
+        HoughCircleDetection hough = new HoughCircleDetection();
+        hough.markCircles(image,76,1.0);
+        imageView.setImageBitmap(image);
+        setContentView(linear);
+    }
+
+    public void log(String message) {
+    	text.setText(text.getText()+message+"\n");
+    }
+
+}

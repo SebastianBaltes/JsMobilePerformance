@@ -1,0 +1,227 @@
+package de.objectcode.perftests.houghcircle;
+
+import java.awt.Point;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.imageio.ImageIO;
+
+import foucault.utils.ImgUtils;
+
+public class HoughCircleDetection {
+
+	public float minRadius = 0.4f;
+
+	public float maxRadius = 1.2f;
+
+	public int radius = 50;
+
+	public float treshold = 1;
+
+	public boolean showHuge = false;
+
+	public boolean autoRadius = true;
+
+	public int seconds = 0;
+
+	int[][] imageValues;
+
+	double[][] houghValues;
+
+	int width;
+
+	int height;
+
+	class HoughCircle {
+		Point center = new Point();
+
+		float radius;
+
+		double maxHouge = -1.0;
+
+		public HoughCircle(float radius) {
+			this.radius = radius;
+		}
+
+		@Override
+		public String toString() {
+			return "HoughCircle [center=" + center + ", maxHouge=" + maxHouge
+					+ ", radius=" + radius + "]";
+		}
+
+	}
+
+	public static void main(String[] args) throws Exception {
+		BufferedImage image = ImageIO.read(new File(
+				"projects/12''/20100119/092827.jpg"));
+		HoughCircleDetection find = new HoughCircleDetection();
+		find.transform(image);
+	}
+
+	public void transform(BufferedImage image) {
+		width = image.getWidth();
+		height = image.getHeight();
+		int[] arr = new int[width * height];
+		image.getRGB(0, 0, width, height, arr, 0, width);
+		setImage2DGrayArray(arr);
+		fillSobelField();
+		HoughCircle circle;
+		if (autoRadius) {
+			circle = findCircle();
+		} else {
+			circle = findCircleWithRadius(new HoughCircle(radius));
+		}
+		System.out.println(circle);
+	}
+
+	private HoughCircle findCircle() {
+		// Golden Section Algorithm
+		// http://www.ubka.uni-karlsruhe.de/cgi-bin/psview?document=2000/physik/1&search=%2f2000%2fphysik%2f1&format=1&page=138
+		// http://wcms1.rz.tu-ilmenau.de/fakia/fileadmin/template/startIA/oek_systeme/lehre/skripte/richt_min.pdf
+		int size = (width + height) / 2;
+		float l = minRadius * size;
+		float r = maxRadius * size;
+		final float tau = (float) (1 + Math.sqrt(5)) / 2 - 1;
+		HoughCircle cxl;
+		HoughCircle cxr;
+		float xl = l + (1 - tau) * (r - l);
+		float xr = l + tau * (r - l);
+		long start = System.currentTimeMillis();
+		class CircleCache {
+			private final Map<Integer, HoughCircle> map = new HashMap<Integer, HoughCircle>();
+
+			public HoughCircle findCircle(float radius) {
+				Integer r = new Integer(Math.round(radius));
+				HoughCircle c = map.get(r);
+				if (c == null) {
+					c = findCircleWithRadius(new HoughCircle(radius));
+					map.put(r, c);
+				}
+				return c;
+			}
+		}
+		CircleCache circleCache = new CircleCache();
+		while (true) {
+			cxl = circleCache.findCircle(xl);
+			if (r - l <= treshold) {
+				seconds = (int) (System.currentTimeMillis() - start) / 1000;
+				return cxl;
+			}
+			cxr = circleCache.findCircle(xr);
+			if (cxl.maxHouge > cxr.maxHouge) {
+				r = xr;
+				xr = xl;
+				xl = l + (1 - tau) * (r - l);
+			} else {
+				l = xl;
+				xl = xr;
+				xr = r - (1 - tau) * (r - xl);
+			}
+		}
+	}
+
+	private void setImage2DGrayArray(int[] arr) {
+		imageValues = new int[width][height];
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				int[] rgb = ImgUtils.splitRGB(arr[x + y * width]);
+				int gray = (rgb[0] + rgb[1] + rgb[2]) / 3;
+				imageValues[x][y] = gray;
+			}
+		}
+	}
+
+	private int[] sobelCoordsX;
+
+	private int[] sobelCoordsY;
+
+	private double[] sobelValues;
+
+	private int soebelEdges;
+
+	private void fillSobelField() {
+		int min = 1;
+		int maxW = width - min;
+		int maxH = height - min;
+		int maxSoebelSize = width * height;
+		sobelCoordsX = new int[maxSoebelSize];
+		sobelCoordsY = new int[maxSoebelSize];
+		sobelValues = new double[maxSoebelSize];
+		soebelEdges = 0;
+		for (int y = min; y < maxH; y++) {
+			for (int x = min; x < maxW; x++) {
+				double soebel = directionLessSobelEdgeDetectionValue(x, y);
+				if (soebel != 0) {
+					sobelCoordsX[soebelEdges] = x;
+					sobelCoordsY[soebelEdges] = y;
+					sobelValues[soebelEdges] = soebel;
+					soebelEdges++;
+				}
+			}
+		}
+	}
+
+	private HoughCircle findCircleWithRadius(HoughCircle circle) {
+		// define circle shape
+		int numCirclePoints = 0;
+		int numPts = Math.round(8 * circle.radius);
+		int[][] circleBorder = new int[2][numPts];
+		for (int i = 0; i < numPts; i++) {
+			double theta = 6.283185307179586 * i / numPts;
+			int xx = (int) Math.round(circle.radius * Math.cos(theta));
+			int yy = (int) Math.round(circle.radius * Math.sin(theta));
+			if (numCirclePoints == 0
+					| (xx != circleBorder[0][numCirclePoints] & yy != circleBorder[1][numCirclePoints])) {
+				circleBorder[0][numCirclePoints] = xx;
+				circleBorder[1][numCirclePoints] = yy;
+				numCirclePoints++;
+			}
+		}
+
+		// do huge transformation
+		houghValues = new double[width][height];
+		for (int i = 0; i < soebelEdges; i++) {
+			int x = sobelCoordsX[i];
+			int y = sobelCoordsY[i];
+			double sobel = sobelValues[i];
+			for (int j = 0; j < numCirclePoints; j++) {
+				int xCoord = x + circleBorder[0][j];
+				int yCoord = y + circleBorder[1][j];
+				if (xCoord >= 0 & xCoord < width & yCoord >= 0 & yCoord < height) {
+					houghValues[xCoord][yCoord] += sobel;
+				}
+			}
+		}
+
+		// get global huge maximum
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				if (houghValues[x][y] > circle.maxHouge) {
+					circle.center.x = x;
+					circle.center.y = y;
+					circle.maxHouge = houghValues[x][y];
+				}
+			}
+		}
+		return circle;
+	}
+
+	private double directionLessSobelEdgeDetectionValue(int xPos, int yPos) {
+		double sobelSum = 0.0;
+		int[][] d = new int[3][3];
+		for (int y = 0; y < 3; y++) {
+			for (int x = 0; x < 3; x++) {
+				d[x][y] = (imageValues[xPos + x - 1][yPos + y - 1]);
+			}
+		}
+		double sobelH = ((double) d[0][2] + (double) (2 * d[1][2]) + d[2][2]
+				- d[0][0] - (2 * d[1][0]) - d[2][0]);
+		double sobelV = ((double) d[2][0] + (double) (2 * d[2][1]) + d[2][2]
+				- d[0][0] - (2 * d[0][1]) - d[0][2]);
+		sobelSum = (Math.abs(sobelH) + Math.abs(sobelV)) / 2;
+		return sobelSum;
+	}
+
+}

@@ -1,0 +1,9 @@
+package de.objectcode.perftests.lotofobjects;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Shop implements Dummy {
+	private Map<String,Item> items = new HashMap<String,Item>();
+	private Map<String,User> users = new HashMap<String,User>();
+}

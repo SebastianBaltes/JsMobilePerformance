@@ -1,0 +1,27 @@
+package de.objectcode.perftests.utils;
+
+public class Measurement {
+	
+	class M {
+		long t;
+		long heap;
+		public M() {
+			t = System.currentTimeMillis();
+			heap = System.nanoTime();
+		}
+		public String diff(M o) {
+			StringBuilder b = new StringBuilder();
+			b.append("time: ").append(t-o.t).append("ns\n");
+			b.append("heap: ").append(heap-o.heap).append("ns\n");
+			return b.toString();
+		}
+	}
+	
+	public Measurement() {
+	}
+	
+	public String end() {
+		t0 = System.currentTimeMillis();
+		heap0 = System.nanoTime();
+	}
+}

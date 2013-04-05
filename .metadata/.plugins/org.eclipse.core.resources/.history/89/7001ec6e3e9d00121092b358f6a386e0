@@ -1,0 +1,13 @@
+#framesPerSecond {
+	position: absolute;
+	z-index: 1;
+	top:1em;
+	left:1em;
+	color: white;	
+}
+
+#canvas {
+	position: absolute;
+	z-index: 0;
+	margin:
+}

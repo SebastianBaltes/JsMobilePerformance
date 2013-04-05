@@ -1,0 +1,17 @@
+package de.objectcode.perftests.lotofobjects;
+
+public class Address implements Dummy {
+	private String[] line = new String[3];
+	private String city;
+	private String plz;
+	private String country;
+	@Override
+	public void fillDummyValues(RandomValues rnd) {
+		for (int i = 0; i < line.length; i++) {
+			line[i] = rnd.nextString(60);
+		}
+		city = rnd.nextString(10);
+		plz = rnd.nextString(5);
+		country = rnd.nextString(10);
+	}
+}

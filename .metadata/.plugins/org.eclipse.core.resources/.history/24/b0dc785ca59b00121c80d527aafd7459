@@ -1,0 +1,33 @@
+package de.objectcode.mandelbrot;
+
+import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+
+public class MyListActivity extends ListActivity {
+	
+  class Test {
+	  private Class<Activity> activity;
+	  
+	  public void start() {
+		  Intent intent = new Intent(MyListActivity.this, activity);
+		  startActivity(intent);		  
+	  }
+	  public String toString() {
+		  return activity.getSimpleName();
+	  }
+  }
+	
+	
+  public void onCreate(Bundle icicle) {
+    super.onCreate(icicle);
+    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
+        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+        "Linux", "OS/2" };
+    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, values);
+    setListAdapter(adapter);
+  }
+  
+} 

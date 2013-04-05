@@ -1,0 +1,15 @@
+package de.objectcode.perftests.lotofobjects;
+
+import de.objectcode.perftests.utils.ShowLogActivity;
+import de.objectcode.perftests.utils.StopWatch;
+
+public class LotOfObjectsActivity extends ShowLogActivity {
+
+	@Override
+	public void perform() {
+		StopWatch w = new StopWatch();
+		Shop shop = new Shop();
+		log(w.stop());
+	}
+
+}

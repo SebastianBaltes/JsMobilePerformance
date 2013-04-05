@@ -1,0 +1,47 @@
+module('perftestsjs.tests').jsonrequest = (function() {
+
+	var rnd;
+		
+    // TODO change this to the url of your test server (see JsonDummyServer)
+	var url = "http://172.22.2.50:9000";
+	
+	function startFN() {
+		rnd = new RandomValues();
+        var w = new StopWatch();
+        log("perform 10 json requests with 100 objects each and parse the response");
+        
+        function request(count) {
+        	if (count==0) {
+        		if (sum==0) {
+        			log("sum should not be zero");
+        		}
+        		log(w.stop());
+        	} else {
+        		$.ajax({
+        			dataType: "json",
+        			url: url+"/"+rnd.nextInt(),
+        			success: function(json) {
+        				// we are in a javascript world, so no parsing ;-)
+        				for (var i = 0; i < 100; i++) {
+        					sum += json[i].id;
+						}
+        				request(count-1);
+        			}
+        		});
+        	}
+        }
+        
+        request(10);
+        
+	}
+
+	function stopFN() {
+	}
+
+	return {
+		start : startFN,
+		stop : stopFN,
+		name : "Strings"
+	}
+
+})();

@@ -1,0 +1,25 @@
+package de.objectcode.perftests.utils;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public abstract class ShowLogActivity extends Activity {
+
+	TextView v;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        v = new TextView(this);
+        setContentView(v);
+        perform();
+    }
+
+    public void log(String message) {
+    	v.setText(v.getText()+message+"\n");
+    }
+    
+	public abstract void perform();
+    
+}
