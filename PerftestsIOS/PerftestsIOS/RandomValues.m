@@ -56,7 +56,7 @@ static NSArray *testArray;
 }
 
 
--(NSData*)nextDate {
+-(NSDate*)nextDate {
     // ok, this is not realy random, but this is no problem for the tests
     return [NSDate date];
 }

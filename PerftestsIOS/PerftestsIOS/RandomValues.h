@@ -14,7 +14,7 @@
 -(int)nextInt;
 -(double)nextDouble;
 -(BOOL)nextBoolean;
--(NSData*)nextDate;
+-(NSDate*)nextDate;
 -(id)nextFromArray:(NSArray*)arr;
 -(NSString*)nextTextWord;
 -(NSString*)nextString:(int)length;

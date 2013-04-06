@@ -17,7 +17,6 @@ NSDate *start;
 }
 
 - (id) init {
-    // Initializer der Superklasse aufrufen ([super init] liefert nil im Fehlerfall)
     if (self = [super init]) {
         [self start];
     }

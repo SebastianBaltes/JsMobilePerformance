@@ -57,6 +57,7 @@
                     <navigationItem key="navigationItem" title="Master" id="36"/>
                     <connections>
                         <segue destination="21" kind="push" identifier="StringSegue" id="k5q-Yv-Etp"/>
+                        <segue destination="8ft-Hm-Je7" kind="push" identifier="ManyObjectsSegue" id="sUC-nL-PHE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
@@ -94,24 +95,38 @@
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
+        <!--Many Objects View Controller - Detail-->
+        <scene sceneID="7Hz-Mg-WBX">
+            <objects>
+                <viewController storyboardIdentifier="" title="Detail" id="8ft-Hm-Je7" customClass="ManyObjectsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TNd-qq-lOb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wm-8B-2gB">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Wm-8B-2gB" firstAttribute="trailing" secondItem="TNd-qq-lOb" secondAttribute="trailing" type="default" id="Iv3-Bs-7ea"/>
+                            <constraint firstItem="6Wm-8B-2gB" firstAttribute="bottom" secondItem="TNd-qq-lOb" secondAttribute="bottom" type="default" id="Zra-Un-VdB"/>
+                            <constraint firstItem="6Wm-8B-2gB" firstAttribute="leading" secondItem="TNd-qq-lOb" secondAttribute="leading" type="default" id="dau-jt-MWR"/>
+                            <constraint firstItem="6Wm-8B-2gB" firstAttribute="top" secondItem="TNd-qq-lOb" secondAttribute="top" type="default" id="mcL-PS-Xdh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="3Pn-bR-0hR"/>
+                    <connections>
+                        <outlet property="logView" destination="6Wm-8B-2gB" id="RIZ-jU-AWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frz-9b-KEZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="752"/>
+        </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PerfLoggingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PerfLoggingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="logView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="PerfMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PerfMasterViewController.h"/>
-        </class>
-        <class className="StringViewController" superclassName="PerfLoggingViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StringViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

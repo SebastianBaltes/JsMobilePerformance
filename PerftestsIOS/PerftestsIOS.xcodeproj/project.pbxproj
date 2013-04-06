@@ -10,6 +10,12 @@
 		842C937B170F667B00D3D24D /* PerfLoggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C937A170F667B00D3D24D /* PerfLoggingViewController.m */; };
 		842C937E170F6A3900D3D24D /* StopWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C937D170F6A3900D3D24D /* StopWatch.m */; };
 		842C9381170F6D9000D3D24D /* RandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C9380170F6D9000D3D24D /* RandomValues.m */; };
+		842C9387170F88AB00D3D24D /* ManyObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C9386170F88AB00D3D24D /* ManyObjectsViewController.m */; };
+		842C93911710096C00D3D24D /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C93901710096C00D3D24D /* Address.m */; };
+		842C93941710098400D3D24D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C93931710098400D3D24D /* User.m */; };
+		842C939717100A4400D3D24D /* Part.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C939617100A4400D3D24D /* Part.m */; };
+		842C939A17100B6000D3D24D /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C939917100B6000D3D24D /* Item.m */; };
+		842C939D17100CD700D3D24D /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C939C17100CD700D3D24D /* Shop.m */; };
 		848EA764170F1B3F00B042BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EA763170F1B3F00B042BA /* UIKit.framework */; };
 		848EA766170F1B3F00B042BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EA765170F1B3F00B042BA /* Foundation.framework */; };
 		848EA768170F1B3F00B042BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EA767170F1B3F00B042BA /* CoreGraphics.framework */; };
@@ -33,6 +39,18 @@
 		842C937D170F6A3900D3D24D /* StopWatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopWatch.m; sourceTree = "<group>"; };
 		842C937F170F6D8F00D3D24D /* RandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomValues.h; sourceTree = "<group>"; };
 		842C9380170F6D9000D3D24D /* RandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomValues.m; sourceTree = "<group>"; };
+		842C9385170F88AB00D3D24D /* ManyObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManyObjectsViewController.h; sourceTree = "<group>"; };
+		842C9386170F88AB00D3D24D /* ManyObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManyObjectsViewController.m; sourceTree = "<group>"; };
+		842C938F1710096C00D3D24D /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		842C93901710096C00D3D24D /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		842C93921710098400D3D24D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		842C93931710098400D3D24D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		842C939517100A4400D3D24D /* Part.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part.h; sourceTree = "<group>"; };
+		842C939617100A4400D3D24D /* Part.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part.m; sourceTree = "<group>"; };
+		842C939817100B6000D3D24D /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		842C939917100B6000D3D24D /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		842C939B17100CD700D3D24D /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
+		842C939C17100CD700D3D24D /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
 		848EA760170F1B3F00B042BA /* PerftestsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerftestsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848EA763170F1B3F00B042BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		848EA765170F1B3F00B042BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +101,35 @@
 			name = utils;
 			sourceTree = "<group>";
 		};
+		842C9384170F878000D3D24D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				842C9388170F898700D3D24D /* ManyObjects */,
+				848EA784170F1B3F00B042BA /* StringViewController.h */,
+				848EA785170F1B3F00B042BA /* StringViewController.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		842C9388170F898700D3D24D /* ManyObjects */ = {
+			isa = PBXGroup;
+			children = (
+				842C9385170F88AB00D3D24D /* ManyObjectsViewController.h */,
+				842C9386170F88AB00D3D24D /* ManyObjectsViewController.m */,
+				842C938F1710096C00D3D24D /* Address.h */,
+				842C93901710096C00D3D24D /* Address.m */,
+				842C93921710098400D3D24D /* User.h */,
+				842C93931710098400D3D24D /* User.m */,
+				842C939517100A4400D3D24D /* Part.h */,
+				842C939617100A4400D3D24D /* Part.m */,
+				842C939817100B6000D3D24D /* Item.h */,
+				842C939917100B6000D3D24D /* Item.m */,
+				842C939B17100CD700D3D24D /* Shop.h */,
+				842C939C17100CD700D3D24D /* Shop.m */,
+			);
+			name = ManyObjects;
+			sourceTree = "<group>";
+		};
 		848EA757170F1B3F00B042BA = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +170,9 @@
 				848EA77B170F1B3F00B042BA /* MainStoryboard_iPhone.storyboard */,
 				848EA781170F1B3F00B042BA /* PerfMasterViewController.h */,
 				848EA782170F1B3F00B042BA /* PerfMasterViewController.m */,
-				848EA784170F1B3F00B042BA /* StringViewController.h */,
-				848EA785170F1B3F00B042BA /* StringViewController.m */,
 				842C9379170F667B00D3D24D /* PerfLoggingViewController.h */,
 				842C937A170F667B00D3D24D /* PerfLoggingViewController.m */,
+				842C9384170F878000D3D24D /* Tests */,
 				842C9382170F6D9800D3D24D /* utils */,
 				848EA76A170F1B3F00B042BA /* Supporting Files */,
 			);
@@ -223,6 +269,12 @@
 				842C937B170F667B00D3D24D /* PerfLoggingViewController.m in Sources */,
 				842C937E170F6A3900D3D24D /* StopWatch.m in Sources */,
 				842C9381170F6D9000D3D24D /* RandomValues.m in Sources */,
+				842C9387170F88AB00D3D24D /* ManyObjectsViewController.m in Sources */,
+				842C93911710096C00D3D24D /* Address.m in Sources */,
+				842C93941710098400D3D24D /* User.m in Sources */,
+				842C939717100A4400D3D24D /* Part.m in Sources */,
+				842C939A17100B6000D3D24D /* Item.m in Sources */,
+				842C939D17100CD700D3D24D /* Shop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
