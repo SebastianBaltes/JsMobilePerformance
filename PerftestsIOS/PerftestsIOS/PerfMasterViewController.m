@@ -29,7 +29,7 @@
     [super viewDidLoad];
     
     self.detailViewController = (PerfDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-    tests = [NSArray arrayWithObjects:@"Mandelbrot",@"ManyObjects",@"String",@"HoughCircle",@"BinaryTrees",@"Sql",@"JsonRequest",@"LongScrollList", nil];
+    tests = [NSArray arrayWithObjects:@"Mandelbrot",@"ManyObjects",@"String",@"HoughCircle",@"BinaryTrees",@"Sql",@"JsonRequest",@"LongScrollList", @"send mail with log", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +47,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return [tests count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,7 +69,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier: [NSString stringWithFormat:@"%@Segue",[tests objectAtIndex:indexPath.row]] sender:self];
+    if (indexPath.row==8) {
+        
+    } else {
+        [self performSegueWithIdentifier: [NSString stringWithFormat:@"%@Segue",[tests objectAtIndex:indexPath.row]] sender:self];        
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

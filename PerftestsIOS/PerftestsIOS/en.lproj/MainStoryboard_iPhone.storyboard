@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="64"/>
+            <point key="canvasLocation" x="-689" y="-844"/>
         </scene>
         <!--Perf Master View Controller - Master-->
         <scene sceneID="18">
@@ -58,11 +58,15 @@
                     <connections>
                         <segue destination="21" kind="push" identifier="StringSegue" id="k5q-Yv-Etp"/>
                         <segue destination="8ft-Hm-Je7" kind="push" identifier="ManyObjectsSegue" id="sUC-nL-PHE"/>
+                        <segue destination="qBo-Or-8hN" kind="push" identifier="BinaryTreesSegue" id="KGU-IB-JkI"/>
+                        <segue destination="xM0-hT-i5B" kind="push" identifier="HoughCircleSegue" id="Uch-GQ-0Ba"/>
+                        <segue destination="Aze-NG-HOE" kind="push" identifier="MandelbrotSegue" id="4Cp-eO-ybL"/>
+                        <segue destination="yCJ-nT-yEb" kind="push" identifier="SqlSegue" id="eXl-GF-ZCo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="447" y="-836"/>
         </scene>
         <!--String View Controller - Detail-->
         <scene sceneID="24">
@@ -93,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="-694" y="-36"/>
         </scene>
         <!--Many Objects View Controller - Detail-->
         <scene sceneID="7Hz-Mg-WBX">
@@ -124,9 +128,188 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frz-9b-KEZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="752"/>
+            <point key="canvasLocation" x="-234" y="-36"/>
+        </scene>
+        <!--Binary Trees View Controller - Detail-->
+        <scene sceneID="U8P-no-kbG">
+            <objects>
+                <viewController storyboardIdentifier="" title="Detail" id="qBo-Or-8hN" customClass="BinaryTreesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiP-mU-j9v">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihf-bS-iDw">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ihf-bS-iDw" firstAttribute="bottom" secondItem="yiP-mU-j9v" secondAttribute="bottom" type="default" id="5A1-z5-HZj"/>
+                            <constraint firstItem="Ihf-bS-iDw" firstAttribute="leading" secondItem="yiP-mU-j9v" secondAttribute="leading" type="default" id="PmU-d0-Cwx"/>
+                            <constraint firstItem="Ihf-bS-iDw" firstAttribute="trailing" secondItem="yiP-mU-j9v" secondAttribute="trailing" type="default" id="ytO-T5-ui0"/>
+                            <constraint firstItem="Ihf-bS-iDw" firstAttribute="top" secondItem="yiP-mU-j9v" secondAttribute="top" type="default" id="zb2-Zm-UVv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="Bfc-19-iDi"/>
+                    <connections>
+                        <outlet property="logView" destination="Ihf-bS-iDw" id="nQE-OF-3Un"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xl2-Hb-TNl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="-36"/>
+        </scene>
+        <!--Hough Circle View Controller - Detail-->
+        <scene sceneID="iQm-mu-a3T">
+            <objects>
+                <viewController storyboardIdentifier="" title="Detail" id="xM0-hT-i5B" customClass="HoughCircleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YwV-55-AIZ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUx-fz-e1L">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="balls.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qpY-nr-e06">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" type="user" id="WNc-qk-sUa"/>
+                                    <constraint firstAttribute="width" constant="200" type="user" id="cF6-zP-UwB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qpY-nr-e06" firstAttribute="leading" secondItem="YwV-55-AIZ" secondAttribute="leading" type="default" id="EmN-9A-Ufz"/>
+                            <constraint firstItem="qpY-nr-e06" firstAttribute="top" secondItem="YwV-55-AIZ" secondAttribute="top" type="default" id="PYd-L9-zmi"/>
+                            <constraint firstItem="xUx-fz-e1L" firstAttribute="bottom" secondItem="YwV-55-AIZ" secondAttribute="bottom" type="default" id="RYE-5l-au2"/>
+                            <constraint firstItem="xUx-fz-e1L" firstAttribute="trailing" secondItem="YwV-55-AIZ" secondAttribute="trailing" type="default" id="U5q-eQ-hxp"/>
+                            <constraint firstItem="xUx-fz-e1L" firstAttribute="top" secondItem="qpY-nr-e06" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WvA-bQ-c7W"/>
+                            <constraint firstItem="xUx-fz-e1L" firstAttribute="leading" secondItem="YwV-55-AIZ" secondAttribute="leading" type="default" id="dg3-mP-Txj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="TQ9-vT-AAe"/>
+                    <connections>
+                        <outlet property="imageView" destination="qpY-nr-e06" id="OVP-XO-l6h"/>
+                        <outlet property="logView" destination="xUx-fz-e1L" id="0c1-hT-COJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHM-U6-zek" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="-44"/>
+        </scene>
+        <!--Mandelbrot View Controller - Detail-->
+        <scene sceneID="ycS-Cw-YDs">
+            <objects>
+                <viewController storyboardIdentifier="" title="Detail" id="Aze-NG-HOE" customClass="MandelbrotViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vc7-ic-kdo">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Zk-u4-lzy"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qt-F8-Rew">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Zk-u4-lzy" firstAttribute="top" secondItem="Vc7-ic-kdo" secondAttribute="top" type="default" id="4Ej-rV-o25"/>
+                            <constraint firstAttribute="bottom" secondItem="4qt-F8-Rew" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="CVj-1r-HXH"/>
+                            <constraint firstItem="2Zk-u4-lzy" firstAttribute="leading" secondItem="Vc7-ic-kdo" secondAttribute="leading" type="default" id="m2d-2a-VGr"/>
+                            <constraint firstItem="2Zk-u4-lzy" firstAttribute="trailing" secondItem="Vc7-ic-kdo" secondAttribute="trailing" type="default" id="psa-gD-5Cq"/>
+                            <constraint firstItem="2Zk-u4-lzy" firstAttribute="bottom" secondItem="Vc7-ic-kdo" secondAttribute="bottom" type="default" id="rpP-9E-EFZ"/>
+                            <constraint firstItem="4qt-F8-Rew" firstAttribute="leading" secondItem="Vc7-ic-kdo" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="y1b-OT-66c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="eJQ-uY-YnA"/>
+                    <connections>
+                        <outlet property="imageView" destination="2Zk-u4-lzy" id="Giq-Vf-Cbi"/>
+                        <outlet property="label" destination="4qt-F8-Rew" id="2se-Dk-veU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJP-wG-6yy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="-44"/>
+        </scene>
+        <!--Sql View Controller - Detail-->
+        <scene sceneID="Vvx-j4-CtF">
+            <objects>
+                <viewController storyboardIdentifier="" title="Detail" id="yCJ-nT-yEb" customClass="SqlViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sMZ-Va-Jrs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpl-Hn-k8t">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gpl-Hn-k8t" firstAttribute="top" secondItem="sMZ-Va-Jrs" secondAttribute="top" type="default" id="Qzs-lJ-Nql"/>
+                            <constraint firstItem="gpl-Hn-k8t" firstAttribute="leading" secondItem="sMZ-Va-Jrs" secondAttribute="leading" type="default" id="gQd-yK-0uB"/>
+                            <constraint firstItem="gpl-Hn-k8t" firstAttribute="bottom" secondItem="sMZ-Va-Jrs" secondAttribute="bottom" type="default" id="hPV-9u-hTK"/>
+                            <constraint firstItem="gpl-Hn-k8t" firstAttribute="trailing" secondItem="sMZ-Va-Jrs" secondAttribute="trailing" type="default" id="mSE-qL-7hS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="63T-Vd-4BJ"/>
+                    <connections>
+                        <outlet property="logView" destination="gpl-Hn-k8t" id="TKE-pV-X3q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTk-z6-hHu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416" y="-44"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="balls.jpg" width="200" height="162"/>
+    </resources>
+    <classes>
+        <class className="BinaryTreesViewController" superclassName="PerfLoggingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BinaryTreesViewController.h"/>
+        </class>
+        <class className="HoughCircleViewController" superclassName="PerfLoggingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HoughCircleViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="MandelbrotViewController" superclassName="PerfLoggingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MandelbrotViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ManyObjectsViewController" superclassName="PerfLoggingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ManyObjectsViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PerfLoggingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PerfLoggingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="logView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="PerfMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PerfMasterViewController.h"/>
+        </class>
+        <class className="SqlViewController" superclassName="PerfLoggingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SqlViewController.h"/>
+        </class>
+        <class className="StringViewController" superclassName="PerfLoggingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StringViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
