@@ -55,7 +55,7 @@ module('perftestsjs.tests').houghcircle = (function() {
 					var G = rgb[i * 4 + 1];
 					var B = rgb[i * 4 + 2];
 					var gray = (R + G + B) / 3;
-					imageValues[x][y] = gray;
+					imageValues[x][y] = gray | 0;
 				}
 			}
 		}
@@ -91,14 +91,14 @@ module('perftestsjs.tests').houghcircle = (function() {
 				var theta = 6.283185307179586 * i / numPts;
 				var xx = Math.round(radius * Math.cos(theta));
 				var yy = Math.round(radius * Math.sin(theta));
-				if (numCirclePoints == 0
-						| (xx != circleBorder[0][numCirclePoints] & yy != circleBorder[1][numCirclePoints])) {
+				if ((numCirclePoints == 0)
+						|| ((xx != circleBorder[0][numCirclePoints]) && (yy != circleBorder[1][numCirclePoints]))) {
 					circleBorder[0][numCirclePoints] = xx;
 					circleBorder[1][numCirclePoints] = yy;
 					numCirclePoints++;
 				}
 			}
-	
+                                           
 			// do huge transformation
 			houghValues = createArr2d(width,height);
 			for (var i = 0; i < soebelEdges; i++) {
