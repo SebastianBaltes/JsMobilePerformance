@@ -10,6 +10,15 @@
 
 @implementation PerfAppDelegate
 
+@synthesize allogs;
+
++(PerfAppDelegate*)get {
+    return (PerfAppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+-(void)log:(NSString*)message {
+    allogs = [allogs stringByAppendingFormat:@"%@\n",message];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -18,6 +27,7 @@
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
     }
+    allogs = @"";
     return YES;
 }
 							

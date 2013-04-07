@@ -3,7 +3,8 @@ module('perftestsjs.tests').jsonrequest = (function() {
 	var rnd;
 		
     // TODO change this to the url of your test server (see JsonDummyServer)
-	var url = "http://172.22.2.50:9000";
+	//var url = "http://172.22.2.50:9000";
+    var url = "http://192.168.1.74:9000";
 	
 	function startFN() {
 		rnd = new RandomValues();

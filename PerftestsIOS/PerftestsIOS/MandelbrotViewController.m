@@ -8,6 +8,7 @@
 
 #import "MandelbrotViewController.h"
 #import "ImageViewRawDataHelper.h"
+#import "PerfAppDelegate.h"
 
 @interface MandelbrotViewController ()
 
@@ -97,8 +98,9 @@ NSDate *framesTimer;
         framesTimer = now;
         framesCountAvg = framesCount/3;
         framesCount = 0;
+        [label setText:[NSString stringWithFormat:@"%d fps",framesCountAvg]];
+        [[PerfAppDelegate get] log:[NSString stringWithFormat:@"%d fps",framesCountAvg]];
     }
-    [label setText:[NSString stringWithFormat:@"%d fps",framesCountAvg]];
 }
 
 void calculateOneIteration(double iterationPixels[], double zr[],  double zi[], unsigned char* rawData) {

@@ -21,10 +21,10 @@ RandomValues* rnd;
 
 - (void)performAction
 {
-    [self log:@"a bottum-up binary tree structure of depth 13 that is modified and walked"];
+    [self log:@"a bottum-up binary tree structure of depth 12 (!) that is modified and walked"];
     StopWatch *w = [StopWatch create];
     rnd = [RandomValues create];
-    [self test:12];
+    [self test:11];
     [self log:[w stop]];
 }
 

@@ -138,6 +138,11 @@
 		84D02203171076A50009EE73 /* MandelbrotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D02202171076A50009EE73 /* MandelbrotViewController.m */; };
 		84D0220E1710B7050009EE73 /* SqlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0220D1710B7050009EE73 /* SqlViewController.m */; };
 		84D022101710BE830009EE73 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0220F1710BE830009EE73 /* libsqlite3.dylib */; };
+		84D022131710D5490009EE73 /* LongScrollListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D022121710D5490009EE73 /* LongScrollListViewController.m */; };
+		84D022161710DF6B0009EE73 /* JsonRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D022151710DF6B0009EE73 /* JsonRequestViewController.m */; };
+		84D0221A1710E3050009EE73 /* ResultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D022191710E3050009EE73 /* ResultObject.m */; };
+		84D0221C1710EC560009EE73 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0221B1710EC560009EE73 /* MessageUI.framework */; };
+		84D0221F1710F4AD0009EE73 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0221E1710F4AD0009EE73 /* AnimationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -293,6 +298,15 @@
 		84D0220C1710B7040009EE73 /* SqlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlViewController.h; sourceTree = "<group>"; };
 		84D0220D1710B7050009EE73 /* SqlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlViewController.m; sourceTree = "<group>"; };
 		84D0220F1710BE830009EE73 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		84D022111710D5490009EE73 /* LongScrollListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongScrollListViewController.h; sourceTree = "<group>"; };
+		84D022121710D5490009EE73 /* LongScrollListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongScrollListViewController.m; sourceTree = "<group>"; };
+		84D022141710DF6A0009EE73 /* JsonRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonRequestViewController.h; sourceTree = "<group>"; };
+		84D022151710DF6B0009EE73 /* JsonRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonRequestViewController.m; sourceTree = "<group>"; };
+		84D022181710E3050009EE73 /* ResultObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultObject.h; sourceTree = "<group>"; };
+		84D022191710E3050009EE73 /* ResultObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultObject.m; sourceTree = "<group>"; };
+		84D0221B1710EC560009EE73 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		84D0221D1710F4AD0009EE73 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		84D0221E1710F4AD0009EE73 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +314,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D0221C1710EC560009EE73 /* MessageUI.framework in Frameworks */,
 				84D022101710BE830009EE73 /* libsqlite3.dylib in Frameworks */,
 				848EA764170F1B3F00B042BA /* UIKit.framework in Frameworks */,
 				848EA766170F1B3F00B042BA /* Foundation.framework in Frameworks */,
@@ -326,7 +341,7 @@
 		842C9384170F878000D3D24D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				84D0220417107B3D0009EE73 /* Mandelbrot */,
+				84D022171710E2DB0009EE73 /* JsonRequest */,
 				842C93A1171018BC00D3D24D /* BinaryTrees */,
 				842C9388170F898700D3D24D /* ManyObjects */,
 				848EA784170F1B3F00B042BA /* StringViewController.h */,
@@ -335,6 +350,12 @@
 				842C93AB17102BA700D3D24D /* HoughCircleViewController.m */,
 				84D0220C1710B7040009EE73 /* SqlViewController.h */,
 				84D0220D1710B7050009EE73 /* SqlViewController.m */,
+				84D022111710D5490009EE73 /* LongScrollListViewController.h */,
+				84D022121710D5490009EE73 /* LongScrollListViewController.m */,
+				84D02201171076A50009EE73 /* MandelbrotViewController.h */,
+				84D02202171076A50009EE73 /* MandelbrotViewController.m */,
+				84D0221D1710F4AD0009EE73 /* AnimationViewController.h */,
+				84D0221E1710F4AD0009EE73 /* AnimationViewController.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -480,6 +501,7 @@
 		848EA757170F1B3F00B042BA = {
 			isa = PBXGroup;
 			children = (
+				84D0221B1710EC560009EE73 /* MessageUI.framework */,
 				84D0220F1710BE830009EE73 /* libsqlite3.dylib */,
 				842C93AD17102C8B00D3D24D /* images */,
 				848EA794170F1E8F00B042BA /* Default-568h@2x.png */,
@@ -539,13 +561,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		84D0220417107B3D0009EE73 /* Mandelbrot */ = {
+		84D022171710E2DB0009EE73 /* JsonRequest */ = {
 			isa = PBXGroup;
 			children = (
-				84D02201171076A50009EE73 /* MandelbrotViewController.h */,
-				84D02202171076A50009EE73 /* MandelbrotViewController.m */,
+				84D022141710DF6A0009EE73 /* JsonRequestViewController.h */,
+				84D022151710DF6B0009EE73 /* JsonRequestViewController.m */,
+				84D022181710E3050009EE73 /* ResultObject.h */,
+				84D022191710E3050009EE73 /* ResultObject.m */,
 			);
-			name = Mandelbrot;
+			name = JsonRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -737,6 +761,10 @@
 				84D021FF171033410009EE73 /* ImageViewRawDataHelper.m in Sources */,
 				84D02203171076A50009EE73 /* MandelbrotViewController.m in Sources */,
 				84D0220E1710B7050009EE73 /* SqlViewController.m in Sources */,
+				84D022131710D5490009EE73 /* LongScrollListViewController.m in Sources */,
+				84D022161710DF6B0009EE73 /* JsonRequestViewController.m in Sources */,
+				84D0221A1710E3050009EE73 /* ResultObject.m in Sources */,
+				84D0221F1710F4AD0009EE73 /* AnimationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

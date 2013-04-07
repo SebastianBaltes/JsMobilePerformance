@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @class PerfDetailViewController;
 
-@interface PerfMasterViewController : UITableViewController
+@interface PerfMasterViewController : UITableViewController <MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) PerfDetailViewController *detailViewController;
+
+- (IBAction)openMail:(id)sender;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "PerfLoggingViewController.h"
-
+#import "PerfAppDelegate.h"
 
 @interface PerfLoggingViewController ()
 @end
@@ -31,6 +31,7 @@
 - (void)log: (NSString *) message
 {
     self.logView.text = [self.logView.text stringByAppendingFormat:@"%@\n",message];
+    [[PerfAppDelegate get] log:message];
 }
 - (void)didReceiveMemoryWarning
 {

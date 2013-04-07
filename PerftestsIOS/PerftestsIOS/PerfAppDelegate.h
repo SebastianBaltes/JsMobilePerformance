@@ -11,5 +11,10 @@
 @interface PerfAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSString *allogs;
+
+-(void)log:(NSString*)message;
++(PerfAppDelegate*)get;
+
 
 @end
