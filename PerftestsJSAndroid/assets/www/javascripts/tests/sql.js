@@ -7,7 +7,7 @@ module('perftestsjs.tests').sql = (function() {
 		var w = new StopWatch();
 		var db = window.openDatabase("MyDatabase", "1.0", "DatabaseDemo", 200000);
 		var errorCB = function(tx, err) {
-			log("Error processing SQL: "+err.message);
+			log("Error processing SQL: "+ JSON.stringify(err.message));
 		}
 		db.transaction(function(tx){
 			tx.executeSql("drop table if exists demo_table;");

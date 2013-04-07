@@ -41,7 +41,7 @@ module('perftestsjs.tests').jsonrequest = (function() {
 	return {
 		start : startFN,
 		stop : stopFN,
-		name : "Strings"
+		name : "JsonRequest"
 	}
 
 })();

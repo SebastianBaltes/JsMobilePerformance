@@ -25,7 +25,8 @@ import de.objectcode.perftests.utils.StopWatch;
 public class JsonRequestActivity extends ShowLogActivity {
 
     // TODO change this to the url of your test server (see JsonDummyServer)
-	public final static String url = "http://172.22.2.50:9000";
+//    public final static String url = "http://172.22.2.50:9000";
+    public final static String url = "http://192.168.1.74:9000";
 	
 	RandomValues rnd;
 
@@ -41,7 +42,7 @@ public class JsonRequestActivity extends ShowLogActivity {
 	                log("perform 10 json requests with 100 objects each and parse the response");
 	                for (int i = 0; i < 10; i++) {
 	                    List<ResultObject> result = request(url+"/" + rnd.nextInt());
-	                    log("returned " + result.size() + " objects");
+//	                    log("returned " + result.size() + " objects");
 	                }
 	                log(w.stop());
 	            } catch (Exception e) {

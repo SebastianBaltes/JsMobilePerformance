@@ -7748,3 +7748,28 @@ Binding(CTRL+SHIFT+ARROW_DOWN,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY com.restphone.androidproguardscala 1 0 2013-04-05 18:10:36.697
+!MESSAGE NonEmptyList(FailureWithException(installing output jar,java.io.FileNotFoundException: /home/sbaltes/workspaces/Performance/PerftestsAndroid/proguard_cache/jartender_cache_7764529133646491746.jar (Datei oder Verzeichnis nicht gefunden),Some(com.restphone.jartender.FileFailureValidation$$anon$1@5d278389)))
+
+!ENTRY com.restphone.androidproguardscala 1 0 2013-04-05 18:12:05.155
+!MESSAGE NonEmptyList(FailureWithException(installing output jar,java.io.FileNotFoundException: /home/sbaltes/workspaces/Performance/PerftestsAndroid/proguard_cache/jartender_cache_7764529133646491746.jar (Datei oder Verzeichnis nicht gefunden),Some(com.restphone.jartender.FileFailureValidation$$anon$1@158902b7)))
+!SESSION 2013-04-07 17:19:39.657 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.restphone.androidproguardscala 1 0 2013-04-07 17:20:22.053
+!MESSAGE NonEmptyList(FailureWithException(installing output jar,java.io.FileNotFoundException: /home/sbaltes/workspaces/Performance/PerftestsAndroid/proguard_cache/jartender_cache_7764529133646491746.jar (Datei oder Verzeichnis nicht gefunden),Some(com.restphone.jartender.FileFailureValidation$$anon$1@41be055d)))
+
+!ENTRY com.restphone.androidproguardscala 1 0 2013-04-07 17:22:06.880
+!MESSAGE NonEmptyList(FailureWithException(installing output jar,java.io.FileNotFoundException: /home/sbaltes/workspaces/Performance/PerftestsAndroid/proguard_cache/jartender_cache_7764529133646491746.jar (Datei oder Verzeichnis nicht gefunden),Some(com.restphone.jartender.FileFailureValidation$$anon$1@10213c9b)))
+
+!ENTRY com.restphone.androidproguardscala 1 0 2013-04-07 17:25:31.193
+!MESSAGE NonEmptyList(FailureWithException(installing output jar,java.io.FileNotFoundException: /home/sbaltes/workspaces/Performance/PerftestsAndroid/proguard_cache/jartender_cache_7764529133646491746.jar (Datei oder Verzeichnis nicht gefunden),Some(com.restphone.jartender.FileFailureValidation$$anon$1@6b98056d)))
+
+!ENTRY com.restphone.androidproguardscala 1 0 2013-04-07 17:26:04.071
+!MESSAGE NonEmptyList(FailureWithException(installing output jar,java.io.FileNotFoundException: /home/sbaltes/workspaces/Performance/PerftestsAndroid/proguard_cache/jartender_cache_7764529133646491746.jar (Datei oder Verzeichnis nicht gefunden),Some(com.restphone.jartender.FileFailureValidation$$anon$1@6ad96257)))
