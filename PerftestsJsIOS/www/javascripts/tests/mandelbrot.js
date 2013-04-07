@@ -200,6 +200,7 @@ module('perftestsjs.tests').mandelbrot = (function() {
 			if (stop) {
 				return;
 			}
+            
 			mandelbrot.calculateOneIteration();
 			var fractalPixels = mandelbrot.fractalPixels;
 			var length = fractalPixels.length;
@@ -216,17 +217,23 @@ module('perftestsjs.tests').mandelbrot = (function() {
 			context
 					.drawImage(unscaledCanvas, 0, 0, canvas.width,
 							canvas.height);
-
+            
 			now = new Date().getTime();
 
-			framesPerSecond.text(framesCountAvg + " fps");
 			framesCount++;
 			if (now - framesTimer > 3000) {
 				framesTimer = now;
 				framesCountAvg = framesCount/3 | 0;
 				framesCount = 0;
+                framesPerSecond.text(framesCountAvg + " fps");
 				permLog(framesCountAvg);
-			}
+            }
+                                          
+            // attention: The resolution of an NSTimer is 50-100 milliseconds. *2 1/60th of a second = 16 milliseconds. Our resolution, at best, is thrice the frequency at which we want our function to be called.
+            // => how many frame per second without anything else?
+            // 110 fps, wenn nichts gemacht wird.
+            // negativtest: wenn direkt oneFrame aufgerufen wird, sind es auch nur 6 fps!
+            // also ist das vorgehen so ok!
 			window.setTimeout(oneFrame, 1);
 		}
 		oneFrame();
